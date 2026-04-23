@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_spf8m"]
 
 [node name="Voidfin" unique_id=267585059 instance=ExtResource("1_8ur78")]
+size = 8
+ember_value = 8
 
 [node name="Sprite2D" parent="." index="0" unique_id=1247833554]
 texture = ExtResource("2_spf8m")

@@ -5,6 +5,7 @@ class_name EnemyBase
 @export var size := 1
 @export var ember_value := 1
 
+var is_alive: bool = true
 var player
 
 func _ready():

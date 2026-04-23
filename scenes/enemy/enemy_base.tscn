@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://conmk1hfff7vx"]
 
+[ext_resource type="Script" uid="uid://bc1l1vsk4rslx" path="res://scripts/enemy/enemy_base.gd" id="1_un3sv"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhum2"]
 
-[node name="EnemyBase" type="CharacterBody2D" unique_id=267585059]
+[node name="EnemyBase" type="CharacterBody2D" unique_id=267585059 groups=["enemy"]]
+script = ExtResource("1_un3sv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1247833554]
 
