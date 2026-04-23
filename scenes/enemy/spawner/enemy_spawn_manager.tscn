@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bijj8dgr3sfgw"]
+
+[ext_resource type="Script" uid="uid://d326vqtbhr5qj" path="res://scripts/enemy/spawner/spawn_manager.gd" id="1_h01ws"]
+[ext_resource type="Resource" uid="uid://cl2weis3b8m6k" path="res://resources/enemy/zone_1/zone1_spawn_data.tres" id="2_6y73d"]
+
+[node name="EnemySpawnManager" type="Node" unique_id=124304397]
+script = ExtResource("1_h01ws")
+zone_data = ExtResource("2_6y73d")

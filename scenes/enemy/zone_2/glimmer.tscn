@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b4js6gsfw7r2l"]
+
+[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_u3bc0"]
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_1a0bg"]
+
+[node name="Glimmer" unique_id=267585059 instance=ExtResource("1_u3bc0")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1247833554]
+texture = ExtResource("2_1a0bg")
+
+[node name="Label" type="Label" parent="." index="2" unique_id=386151268]
+offset_left = -34.0
+offset_top = -88.0
+offset_right = 31.0
+offset_bottom = -65.0
+text = "GLIMMER"

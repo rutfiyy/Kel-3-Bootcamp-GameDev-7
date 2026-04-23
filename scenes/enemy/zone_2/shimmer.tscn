@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dr1n488d75ho0"]
+
+[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_vvhq5"]
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_hbpoa"]
+
+[node name="Shimmer" unique_id=267585059 instance=ExtResource("1_vvhq5")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1247833554]
+texture = ExtResource("2_hbpoa")
+
+[node name="Label" type="Label" parent="." index="2" unique_id=99946641]
+offset_left = -34.0
+offset_top = -89.0
+offset_right = 37.0
+offset_bottom = -66.0
+text = "SHIMMER"

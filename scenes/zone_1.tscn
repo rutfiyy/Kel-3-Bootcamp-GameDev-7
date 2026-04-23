@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://keeo51uhb3ok"]
+
+[ext_resource type="PackedScene" uid="uid://bijj8dgr3sfgw" path="res://scenes/enemy/spawner/enemy_spawn_manager.tscn" id="1_yqjtg"]
+[ext_resource type="Script" uid="uid://beei6cly37b1" path="res://test_player.gd" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="3_lnu2h"]
+
+[node name="Zone1" type="Node2D" unique_id=608064837]
+
+[node name="EnemySpawnManager" parent="." unique_id=124304397 instance=ExtResource("1_yqjtg")]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=125821439 groups=["player"]]
+script = ExtResource("2_lnu2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1869442804]
+texture = ExtResource("3_lnu2h")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=283743106]

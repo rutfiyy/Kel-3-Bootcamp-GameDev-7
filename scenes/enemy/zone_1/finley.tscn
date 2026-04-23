@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dun4mncvv056e"]
+
+[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_xdkqo"]
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_3dsoy"]
+
+[node name="Finley" unique_id=267585059 instance=ExtResource("1_xdkqo")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1247833554]
+texture = ExtResource("2_3dsoy")
+
+[node name="Label" type="Label" parent="." index="2" unique_id=443797118]
+offset_left = -20.0
+offset_top = -91.0
+offset_right = 34.0
+offset_bottom = -68.0
+text = "FINLEY"

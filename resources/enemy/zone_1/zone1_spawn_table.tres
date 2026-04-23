@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SpawnTable" format=3 uid="uid://bp8xxdmkikhfl"]
+
+[ext_resource type="PackedScene" uid="uid://bp2pohg2voifp" path="res://scenes/enemy/zone_1/glowy.tscn" id="1_svg6t"]
+[ext_resource type="PackedScene" uid="uid://dun4mncvv056e" path="res://scenes/enemy/zone_1/finley.tscn" id="2_25rr3"]
+[ext_resource type="PackedScene" uid="uid://biy5u5udt2eel" path="res://scenes/enemy/zone_1/tiny.tscn" id="3_kfysq"]
+[ext_resource type="Script" uid="uid://ci082okojxk0e" path="res://scripts/enemy/spawner/spawn_table.gd" id="4_8tbqr"]
+
+[resource]
+script = ExtResource("4_8tbqr")
+entries = Array[Dictionary]([{
+"max": 8,
+"scene": ExtResource("1_svg6t"),
+"weight": 0.5
+}, {
+"max": 5,
+"scene": ExtResource("2_25rr3"),
+"weight": 0.3
+}, {
+"max": 6,
+"scene": ExtResource("3_kfysq"),
+"weight": 0.2
+}])
+metadata/_custom_type_script = "uid://ci082okojxk0e"

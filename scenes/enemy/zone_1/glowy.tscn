@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bp2pohg2voifp"]
+
+[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_72qwh"]
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_kpk2e"]
+
+[node name="Glowy" unique_id=267585059 instance=ExtResource("1_72qwh")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1247833554]
+texture = ExtResource("2_kpk2e")
+
+[node name="Label" type="Label" parent="." index="2" unique_id=1981276073]
+offset_left = -30.0
+offset_top = -90.0
+offset_right = 28.0
+offset_bottom = -67.0
+text = "GLOWY"

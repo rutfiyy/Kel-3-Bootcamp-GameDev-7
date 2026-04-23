@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ZoneData" format=3 uid="uid://ceqdtv3x3etxd"]
+
+[ext_resource type="Script" uid="uid://uucdopxjrpy6" path="res://scripts/enemy/spawner/zone_data.gd" id="1_50daq"]
+[ext_resource type="Resource" uid="uid://b3b5s4yi7rujq" path="res://resources/enemy/zone_2/zone2_spawn_table.tres" id="2_ds2f4"]
+
+[resource]
+script = ExtResource("1_50daq")
+max_capacity = 20
+min_threshold = 10
+spawn_interval_min = 6.25
+spawn_interval_max = 7.75
+spawn_radius_min = 500.0
+spawn_radius_max = 900.0
+spawn_table = ExtResource("2_ds2f4")
+metadata/_custom_type_script = "uid://uucdopxjrpy6"

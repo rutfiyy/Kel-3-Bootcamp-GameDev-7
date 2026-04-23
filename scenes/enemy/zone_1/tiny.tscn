@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://biy5u5udt2eel"]
+
+[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_qi1bq"]
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_bfrtk"]
+
+[node name="Tiny" unique_id=267585059 instance=ExtResource("1_qi1bq")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1247833554]
+texture = ExtResource("2_bfrtk")
+
+[node name="Label" type="Label" parent="." index="2" unique_id=1698899740]
+offset_left = -19.0
+offset_top = -89.0
+offset_right = 21.0
+offset_bottom = -66.0
+text = "TINY"

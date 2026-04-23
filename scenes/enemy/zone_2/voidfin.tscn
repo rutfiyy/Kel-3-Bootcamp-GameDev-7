@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cm50bxk84levi"]
+
+[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_8ur78"]
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_spf8m"]
+
+[node name="Voidfin" unique_id=267585059 instance=ExtResource("1_8ur78")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1247833554]
+texture = ExtResource("2_spf8m")
+
+[node name="Label" type="Label" parent="." index="2" unique_id=1383832360]
+offset_left = -30.0
+offset_top = -89.0
+offset_right = 36.0
+offset_bottom = -66.0
+text = "VOIDFIN"
