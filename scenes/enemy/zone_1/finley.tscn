@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_3cujj"]
 [ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_illwx"]
+[ext_resource type="BehaviorTree" uid="uid://c5x8h70ijwovm" path="res://resources/enemy/ai/normal_enemy_behavior.tres" id="3_illwx"]
 
 [node name="Finley" unique_id=267585059 instance=ExtResource("1_3cujj")]
 size = 2
@@ -15,3 +16,6 @@ offset_top = -91.0
 offset_right = 34.0
 offset_bottom = -68.0
 text = "FINLEY"
+
+[node name="BTPlayer" parent="." index="3" unique_id=1905209126]
+behavior_tree = ExtResource("3_illwx")

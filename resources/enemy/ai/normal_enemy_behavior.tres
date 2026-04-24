@@ -1,0 +1,41 @@
+[gd_resource type="BehaviorTree" format=3 uid="uid://c5x8h70ijwovm"]
+
+[ext_resource type="BlackboardPlan" uid="uid://hd6nhqfk648f" path="res://resources/enemy/ai/blackboard_plan.tres" id="1_5pdnt"]
+[ext_resource type="Script" uid="uid://byqf2eaahjn3k" path="res://ai/tasks/action/BTAction_flee.gd" id="2_onpxm"]
+[ext_resource type="Script" uid="uid://wcxvqmu2xkdy" path="res://ai/tasks/action/BTAction_wander.gd" id="3_ytco1"]
+
+[sub_resource type="BBVariant" id="BBVariant_5pdnt"]
+type = 3
+saved_value = 200.0
+resource_name = "200.0"
+
+[sub_resource type="BTCheckVar" id="BTCheckVar_onpxm"]
+variable = &"distance_to_player"
+check_type = 2
+value = SubResource("BBVariant_5pdnt")
+
+[sub_resource type="BBVariant" id="BBVariant_j2hm2"]
+value_source = 1
+variable = &"self_size"
+resource_name = "$self_size"
+
+[sub_resource type="BTCheckVar" id="BTCheckVar_pf2lq"]
+variable = &"player_size"
+check_type = 3
+value = SubResource("BBVariant_j2hm2")
+
+[sub_resource type="BTAction" id="BTAction_d14pr"]
+script = ExtResource("2_onpxm")
+
+[sub_resource type="BTSequence" id="BTSequence_ejit8"]
+children = [SubResource("BTCheckVar_onpxm"), SubResource("BTCheckVar_pf2lq"), SubResource("BTAction_d14pr")]
+
+[sub_resource type="BTAction" id="BTAction_s6v76"]
+script = ExtResource("3_ytco1")
+
+[sub_resource type="BTSelector" id="BTSelector_3cbvy"]
+children = [SubResource("BTSequence_ejit8"), SubResource("BTAction_s6v76")]
+
+[resource]
+blackboard_plan = ExtResource("1_5pdnt")
+root_task = SubResource("BTSelector_3cbvy")

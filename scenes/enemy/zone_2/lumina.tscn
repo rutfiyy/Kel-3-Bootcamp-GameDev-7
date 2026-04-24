@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_t8ej3"]
 [ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_mnvfy"]
+[ext_resource type="BehaviorTree" uid="uid://bqs0fub6f304y" path="res://resources/enemy/ai/passive_enemy_behavior.tres" id="3_153vw"]
 
 [node name="Lumina" unique_id=267585059 instance=ExtResource("1_t8ej3")]
 size = 4
@@ -16,3 +17,6 @@ offset_top = -88.0
 offset_right = 27.0
 offset_bottom = -65.0
 text = "LUMINA"
+
+[node name="BTPlayer" parent="." index="3" unique_id=1905209126]
+behavior_tree = ExtResource("3_153vw")

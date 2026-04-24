@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://bp2pohg2voifp"]
 
-[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_72qwh"]
-[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_kpk2e"]
+[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_u5v8x"]
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_xihto"]
+[ext_resource type="BehaviorTree" uid="uid://c5x8h70ijwovm" path="res://resources/enemy/ai/normal_enemy_behavior.tres" id="3_gpsbb"]
 
-[node name="Glowy" unique_id=267585059 instance=ExtResource("1_72qwh")]
+[node name="Glowy" unique_id=267585059 instance=ExtResource("1_u5v8x")]
 
 [node name="Sprite2D" parent="." index="0" unique_id=1247833554]
-texture = ExtResource("2_kpk2e")
+texture = ExtResource("2_xihto")
 
 [node name="Label" type="Label" parent="." index="2" unique_id=1981276073]
 offset_left = -30.0
@@ -14,3 +15,6 @@ offset_top = -90.0
 offset_right = 28.0
 offset_bottom = -67.0
 text = "GLOWY"
+
+[node name="BTPlayer" parent="." index="3" unique_id=1905209126]
+behavior_tree = ExtResource("3_gpsbb")

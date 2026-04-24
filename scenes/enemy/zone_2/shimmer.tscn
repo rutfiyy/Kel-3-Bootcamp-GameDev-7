@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_vvhq5"]
 [ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_hbpoa"]
+[ext_resource type="BehaviorTree" uid="uid://cefpksm2rjvvi" path="res://resources/enemy/ai/predator_enemy_behavior.tres" id="3_wuuki"]
 
 [node name="Shimmer" unique_id=267585059 instance=ExtResource("1_vvhq5")]
 size = 3
@@ -16,3 +17,6 @@ offset_top = -89.0
 offset_right = 37.0
 offset_bottom = -66.0
 text = "SHIMMER"
+
+[node name="BTPlayer" parent="." index="3" unique_id=1905209126]
+behavior_tree = ExtResource("3_wuuki")

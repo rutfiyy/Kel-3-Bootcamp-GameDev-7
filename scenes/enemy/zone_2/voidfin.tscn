@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_8ur78"]
 [ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_spf8m"]
+[ext_resource type="BehaviorTree" uid="uid://cefpksm2rjvvi" path="res://resources/enemy/ai/predator_enemy_behavior.tres" id="3_tkua2"]
 
 [node name="Voidfin" unique_id=267585059 instance=ExtResource("1_8ur78")]
 size = 8
@@ -16,3 +17,6 @@ offset_top = -89.0
 offset_right = 36.0
 offset_bottom = -66.0
 text = "VOIDFIN"
+
+[node name="BTPlayer" parent="." index="3" unique_id=1905209126]
+behavior_tree = ExtResource("3_tkua2")

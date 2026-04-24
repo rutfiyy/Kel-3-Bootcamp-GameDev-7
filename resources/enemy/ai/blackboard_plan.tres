@@ -1,0 +1,22 @@
+[gd_resource type="BlackboardPlan" format=3 uid="uid://hd6nhqfk648f"]
+
+[resource]
+var/player/name = &"player"
+var/player/type = 24
+var/player/hint = 34
+var/player/hint_string = ""
+var/self_size/name = &"self_size"
+var/self_size/type = 2
+var/self_size/value = 0
+var/self_size/hint = 0
+var/self_size/hint_string = ""
+var/player_size/name = &"player_size"
+var/player_size/type = 2
+var/player_size/value = 0
+var/player_size/hint = 0
+var/player_size/hint_string = ""
+var/distance_to_player/name = &"distance_to_player"
+var/distance_to_player/type = 3
+var/distance_to_player/value = 0.0
+var/distance_to_player/hint = 0
+var/distance_to_player/hint_string = ""

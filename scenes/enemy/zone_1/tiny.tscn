@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://biy5u5udt2eel"]
 
-[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_qi1bq"]
-[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_bfrtk"]
+[ext_resource type="PackedScene" uid="uid://conmk1hfff7vx" path="res://scenes/enemy/enemy_base.tscn" id="1_yg1n8"]
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="2_alecb"]
+[ext_resource type="BehaviorTree" uid="uid://c5x8h70ijwovm" path="res://resources/enemy/ai/normal_enemy_behavior.tres" id="3_4cwy1"]
 
-[node name="Tiny" unique_id=267585059 instance=ExtResource("1_qi1bq")]
+[node name="Tiny" unique_id=267585059 instance=ExtResource("1_yg1n8")]
 
 [node name="Sprite2D" parent="." index="0" unique_id=1247833554]
-texture = ExtResource("2_bfrtk")
+texture = ExtResource("2_alecb")
 
 [node name="Label" type="Label" parent="." index="2" unique_id=1698899740]
 offset_left = -19.0
@@ -14,3 +15,6 @@ offset_top = -89.0
 offset_right = 21.0
 offset_bottom = -66.0
 text = "TINY"
+
+[node name="BTPlayer" parent="." index="3" unique_id=1905209126]
+behavior_tree = ExtResource("3_4cwy1")

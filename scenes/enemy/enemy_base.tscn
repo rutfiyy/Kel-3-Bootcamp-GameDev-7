@@ -4,6 +4,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhum2"]
 
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_un3sv"]
+
 [node name="EnemyBase" type="CharacterBody2D" unique_id=267585059 groups=["enemy"]]
 script = ExtResource("1_un3sv")
 
@@ -11,3 +13,7 @@ script = ExtResource("1_un3sv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=88988442]
 shape = SubResource("RectangleShape2D_uhum2")
+
+[node name="BTPlayer" type="BTPlayer" parent="." unique_id=1905209126]
+blackboard_plan = SubResource("BlackboardPlan_un3sv")
+unique_name_in_owner = true

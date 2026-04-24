@@ -1,0 +1,68 @@
+[gd_resource type="BehaviorTree" format=3 uid="uid://cefpksm2rjvvi"]
+
+[ext_resource type="BlackboardPlan" uid="uid://hd6nhqfk648f" path="res://resources/enemy/ai/blackboard_plan.tres" id="1_ylfdh"]
+[ext_resource type="Script" uid="uid://wcxvqmu2xkdy" path="res://ai/tasks/action/BTAction_wander.gd" id="2_iwka6"]
+[ext_resource type="Script" uid="uid://bha4lmaodjfur" path="res://ai/tasks/action/BTAction_chase.gd" id="2_xu7ee"]
+[ext_resource type="Script" uid="uid://byqf2eaahjn3k" path="res://ai/tasks/action/BTAction_flee.gd" id="3_0u5kd"]
+
+[sub_resource type="BBVariant" id="BBVariant_xu7ee"]
+type = 3
+saved_value = 400.0
+resource_name = "400.0"
+
+[sub_resource type="BTCheckVar" id="BTCheckVar_0u5kd"]
+variable = &"distance_to_player"
+check_type = 2
+value = SubResource("BBVariant_xu7ee")
+
+[sub_resource type="BBVariant" id="BBVariant_0u5kd"]
+value_source = 1
+variable = &"self_size"
+resource_name = "$self_size"
+
+[sub_resource type="BTCheckVar" id="BTCheckVar_2o6k6"]
+variable = &"player_size"
+check_type = 2
+value = SubResource("BBVariant_0u5kd")
+
+[sub_resource type="BTAction" id="BTAction_nve6n"]
+script = ExtResource("2_xu7ee")
+
+[sub_resource type="BTSequence" id="BTSequence_2o6k6"]
+children = [SubResource("BTCheckVar_0u5kd"), SubResource("BTCheckVar_2o6k6"), SubResource("BTAction_nve6n")]
+
+[sub_resource type="BBVariant" id="BBVariant_2o6k6"]
+type = 3
+saved_value = 200.0
+resource_name = "200.0"
+
+[sub_resource type="BTCheckVar" id="BTCheckVar_nve6n"]
+variable = &"distance_to_player"
+check_type = 2
+value = SubResource("BBVariant_2o6k6")
+
+[sub_resource type="BBVariant" id="BBVariant_mtotn"]
+value_source = 1
+variable = &"self_size"
+resource_name = "$self_size"
+
+[sub_resource type="BTCheckVar" id="BTCheckVar_heanj"]
+variable = &"player_size"
+check_type = 3
+value = SubResource("BBVariant_mtotn")
+
+[sub_resource type="BTAction" id="BTAction_x15au"]
+script = ExtResource("3_0u5kd")
+
+[sub_resource type="BTSequence" id="BTSequence_nve6n"]
+children = [SubResource("BTCheckVar_nve6n"), SubResource("BTCheckVar_heanj"), SubResource("BTAction_x15au")]
+
+[sub_resource type="BTAction" id="BTAction_mtotn"]
+script = ExtResource("2_iwka6")
+
+[sub_resource type="BTSelector" id="BTSelector_iwka6"]
+children = [SubResource("BTSequence_2o6k6"), SubResource("BTSequence_nve6n"), SubResource("BTAction_mtotn")]
+
+[resource]
+blackboard_plan = ExtResource("1_ylfdh")
+root_task = SubResource("BTSelector_iwka6")
