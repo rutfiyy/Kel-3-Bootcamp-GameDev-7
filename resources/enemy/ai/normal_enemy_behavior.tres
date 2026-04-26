@@ -1,8 +1,8 @@
 [gd_resource type="BehaviorTree" format=3 uid="uid://c5x8h70ijwovm"]
 
 [ext_resource type="BlackboardPlan" uid="uid://hd6nhqfk648f" path="res://resources/enemy/ai/blackboard_plan.tres" id="1_5pdnt"]
-[ext_resource type="Script" uid="uid://byqf2eaahjn3k" path="res://ai/tasks/action/BTAction_flee.gd" id="2_onpxm"]
-[ext_resource type="Script" uid="uid://wcxvqmu2xkdy" path="res://ai/tasks/action/BTAction_wander.gd" id="3_ytco1"]
+[ext_resource type="Script" uid="uid://cpbddq1vrv4x5" path="res://ai/tasks/action/BTAction_flee.gd" id="2_onpxm"]
+[ext_resource type="Script" uid="uid://c27g8wd1kar0j" path="res://ai/tasks/action/BTAction_wander.gd" id="3_ytco1"]
 
 [sub_resource type="BBVariant" id="BBVariant_5pdnt"]
 type = 3

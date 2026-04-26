@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://hxluq2gukkdx"]
+
+[ext_resource type="Script" uid="uid://00su8v8jodj7" path="res://player.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://cr1h8aovbronx" path="res://Assets/angieSmall_96px.png" id="2_g2els"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g2els")
+}],
+"loop": true,
+"name": &"eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g2els")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g2els")
+}],
+"loop": true,
+"name": &"swim_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g2els")
+}],
+"loop": true,
+"name": &"swim_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g2els")
+}],
+"loop": true,
+"name": &"swim_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g2els")
+}],
+"loop": true,
+"name": &"swim_up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 50.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1153191769]
+script = ExtResource("1_3vyb7")
+
+[node name="IdleTimer" type="Timer" parent="." unique_id=2075544163]
+wait_time = 0.1
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=488894266]
+sprite_frames = SubResource("SpriteFrames_g2els")
+animation = &"eat"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=57989693]
+shape = SubResource("CircleShape2D_g2els")

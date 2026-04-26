@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c43xi5mader12"]
+
+[ext_resource type="Script" uid="uid://bn8eylcdn30dt" path="res://scenes/ember.gd" id="1_fibi0"]
+[ext_resource type="Texture2D" uid="uid://bnjyljpf0ss0h" path="res://Assets/Gemini_Generated_Image_1vich51vich51vic (1).png" id="2_p4v4c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k2f2i"]
+
+[node name="ember" type="Area2D" unique_id=1313916795]
+script = ExtResource("1_fibi0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=859347185]
+shape = SubResource("CircleShape2D_k2f2i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1895563895]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_p4v4c")
