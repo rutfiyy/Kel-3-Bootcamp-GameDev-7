@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 @export var zone_data: ZoneData
 
@@ -61,13 +61,40 @@ func pick_enemy():
 	return valid_entries[0]
 
 func get_spawn_position() -> Vector2:
-	var angle = randf() * TAU
-	var dist = randf_range(
-		zone_data.spawn_radius_min,
-		zone_data.spawn_radius_max
-	)
+	var max_tries = 10
 
-	return player.global_position + Vector2.RIGHT.rotated(angle) * dist
+	for i in range(max_tries):
+		var angle = randf() * TAU
+		var dist = randf_range(
+			zone_data.spawn_radius_min,
+			zone_data.spawn_radius_max
+		)
+
+		var pos = player.global_position + Vector2.RIGHT.rotated(angle) * dist
+
+		if is_valid_spawn_position(pos):
+			return pos
+
+	# fallback (kalau gagal terus)
+	return player.global_position
+
+func is_valid_spawn_position(pos: Vector2) -> bool:
+	# cek dalam map
+	if not zone_data.map_bounds.has_point(pos):
+		return false
+
+	var space = get_world_2d().direct_space_state
+
+	var query = PhysicsPointQueryParameters2D.new()
+	query.position = pos
+	query.collide_with_bodies = true
+
+	var result = space.intersect_point(query)
+
+	if result.size() > 0:
+		return false
+
+	return true
 
 func try_spawn_enemy():
 	if not can_spawn():

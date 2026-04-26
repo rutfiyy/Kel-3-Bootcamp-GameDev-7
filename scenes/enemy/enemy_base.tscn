@@ -10,6 +10,7 @@
 size = Vector2(128, 128)
 
 [node name="EnemyBase" type="CharacterBody2D" unique_id=267585059 groups=["enemy"]]
+z_index = 10
 script = ExtResource("1_un3sv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1247833554]

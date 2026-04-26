@@ -1,6 +1,8 @@
 extends Resource
 class_name ZoneData
 
+@export var map_bounds: Rect2
+
 @export var max_capacity: int
 @export var min_threshold: int
 

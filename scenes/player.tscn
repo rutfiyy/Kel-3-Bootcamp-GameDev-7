@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://hxluq2gukkdx"]
+[gd_scene format=3 uid="uid://b5oqgopdpqi5m"]
 
-[ext_resource type="Script" uid="uid://00su8v8jodj7" path="res://player.gd" id="1_3vyb7"]
-[ext_resource type="Texture2D" uid="uid://cr1h8aovbronx" path="res://Assets/angieSmall_96px.png" id="2_g2els"]
+[ext_resource type="Script" uid="uid://wcu1p00kx0cg" path="res://player.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://cr1h8aovbronx" path="res://assets/angieSmall_96px.png" id="2_g2els"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
@@ -57,7 +57,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 50.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1153191769]
+[node name="Player" type="CharacterBody2D" unique_id=1153191769 groups=["player"]]
 script = ExtResource("1_3vyb7")
 
 [node name="IdleTimer" type="Timer" parent="." unique_id=2075544163]

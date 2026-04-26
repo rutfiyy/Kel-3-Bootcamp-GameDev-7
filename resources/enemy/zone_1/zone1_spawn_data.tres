@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="ZoneData" format=3 uid="uid://cl2weis3b8m6k"]
 
-[ext_resource type="Script" uid="uid://uucdopxjrpy6" path="res://scripts/enemy/spawner/zone_data.gd" id="1_dgyql"]
+[ext_resource type="Script" uid="uid://c8h2ug5c3m4ob" path="res://scripts/enemy/spawner/zone_data.gd" id="1_dgyql"]
 [ext_resource type="Resource" uid="uid://bp8xxdmkikhfl" path="res://resources/enemy/zone_1/zone1_spawn_table.tres" id="2_rrres"]
 
 [resource]
 script = ExtResource("1_dgyql")
+map_bounds = Rect2(-720, -400, 2928, 1776)
 max_capacity = 15
 min_threshold = 5
 spawn_interval_min = 5.0
@@ -12,4 +13,3 @@ spawn_interval_max = 7.0
 spawn_radius_min = 400.0
 spawn_radius_max = 800.0
 spawn_table = ExtResource("2_rrres")
-metadata/_custom_type_script = "uid://uucdopxjrpy6"
