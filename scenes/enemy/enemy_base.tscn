@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://conmk1hfff7vx"]
 
-[ext_resource type="Script" uid="uid://bc1l1vsk4rslx" path="res://scripts/enemy/enemy_base.gd" id="1_un3sv"]
+[ext_resource type="Script" uid="uid://c42lcl6wxyyv" path="res://scripts/enemy/enemy_base.gd" id="1_un3sv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhum2"]
 
 [sub_resource type="BlackboardPlan" id="BlackboardPlan_un3sv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_un3sv"]
+size = Vector2(128, 128)
 
 [node name="EnemyBase" type="CharacterBody2D" unique_id=267585059 groups=["enemy"]]
 script = ExtResource("1_un3sv")
@@ -17,3 +20,11 @@ shape = SubResource("RectangleShape2D_uhum2")
 [node name="BTPlayer" type="BTPlayer" parent="." unique_id=1905209126]
 blackboard_plan = SubResource("BlackboardPlan_un3sv")
 unique_name_in_owner = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2114645507]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=575967909]
+shape = SubResource("RectangleShape2D_un3sv")
+debug_color = Color(0, 1, 1, 0.41960785)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

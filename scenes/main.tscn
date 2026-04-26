@@ -1,17 +1,18 @@
-[gd_scene format=4 uid="uid://giqrscxsyoui"]
+[gd_scene format=4 uid="uid://bvnqy6uxshxoc"]
 
-[ext_resource type="PackedScene" uid="uid://hxluq2gukkdx" path="res://scenes/player.tscn" id="1_o5qli"]
-[ext_resource type="Script" uid="uid://bb7e40lqr5k26" path="res://scenes/main.gd" id="1_sugp2"]
-[ext_resource type="PackedScene" uid="uid://muc0td7yo3df" path="res://scenes/spawner.tscn" id="2_0wfyh"]
-[ext_resource type="Texture2D" uid="uid://exmscww27bxb" path="res://Assets/zone01_BG02 (sebenarnya cuma direverse).png" id="2_jyhfs"]
-[ext_resource type="Script" uid="uid://cmllyi08oqq5" path="res://scenes/camera_2d.gd" id="4_tbgi4"]
-[ext_resource type="Texture2D" uid="uid://cr1h8aovbronx" path="res://Assets/angieSmall_96px.png" id="6_eb6dy"]
-[ext_resource type="Texture2D" uid="uid://be718p5sjfpik" path="res://Assets/zone01_tilesets.png" id="6_tefeu"]
-[ext_resource type="Texture2D" uid="uid://g0o8axxsnvmc" path="res://Assets/props_FG_seaweed01.png" id="7_ya4ey"]
-[ext_resource type="Texture2D" uid="uid://soycnmiy485f" path="res://Assets/props_FG_anemone01.png" id="8_eb6dy"]
-[ext_resource type="Texture2D" uid="uid://bobvww6a0h4x4" path="res://Assets/props_MG_anemone01.png" id="9_trceg"]
-[ext_resource type="Texture2D" uid="uid://b86tuxheov8gg" path="res://Assets/props_MG_coral01.png" id="10_a8y0u"]
-[ext_resource type="AudioStream" uid="uid://cvgkj6u40fubk" path="res://Assets/SM64 Custom Music -  if it rains - pillow05 (youtube).mp3" id="11_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://b5oqgopdpqi5m" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dp1oup51y8uyg" path="res://scenes/main.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://exmscww27bxb" path="res://assets/zone01_BG02 (sebenarnya cuma direverse).png" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bijj8dgr3sfgw" path="res://scenes/enemy/spawner/enemy_spawn_manager.tscn" id="2_trceg"]
+[ext_resource type="Script" uid="uid://d1o3mrjxmmc72" path="res://scenes/camera_2d.gd" id="4_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://cr1h8aovbronx" path="res://assets/angieSmall_96px.png" id="6_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://be718p5sjfpik" path="res://assets/zone01_tilesets.png" id="6_tefeu"]
+[ext_resource type="Texture2D" uid="uid://g0o8axxsnvmc" path="res://assets/props_FG_seaweed01.png" id="7_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://soycnmiy485f" path="res://assets/props_FG_anemone01.png" id="8_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://bobvww6a0h4x4" path="res://assets/props_MG_anemone01.png" id="9_trceg"]
+[ext_resource type="Texture2D" uid="uid://b86tuxheov8gg" path="res://assets/props_MG_coral01.png" id="10_a8y0u"]
+[ext_resource type="AudioStream" uid="uid://cvgkj6u40fubk" path="res://assets/SM64 Custom Music -  if it rains - pillow05 (youtube).mp3" id="11_jkv2x"]
 
 [sub_resource type="TileSet" id="TileSet_tipki"]
 physics_layer_0/collision_layer = 1
@@ -5045,6 +5046,8 @@ sources/1 = SubResource("TileSetAtlasSource_gqmmt")
 
 [node name="Main" type="Node2D" unique_id=1927685623]
 script = ExtResource("1_sugp2")
+
+[node name="EnemySpawnManager" parent="." unique_id=124304397 instance=ExtResource("2_trceg")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2104647411]
 position = Vector2(720, 937.9999)

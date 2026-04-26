@@ -95,6 +95,14 @@ func consume_ember(value: int):
 	idle_timer = 0.0
 	print("Ukuran Angie: ", current_size)
 
+func consume_enemy(value: int):
+	if dead: return
+	animated_sprite.play("eat")
+	animated_sprite.flip_h = (last_direction == "left")
+	grow(value)
+	idle_timer = 0.0
+	print("Ukuran Angie: ", current_size)
+
 # ----- SIZE & SHRINK -----
 func grow(amount: int):
 	current_size += amount * ember_value * 0.1

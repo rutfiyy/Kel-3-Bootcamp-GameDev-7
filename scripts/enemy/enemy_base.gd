@@ -18,7 +18,7 @@ func _ready():
 func _process(delta):
 	bt.blackboard.set_var("player", player)
 	bt.blackboard.set_var("self_size", size)
-	bt.blackboard.set_var("player_size", player.size)
+	bt.blackboard.set_var("player_size", player.current_size)
 	bt.blackboard.set_var("distance_to_player",
 		global_position.distance_to(player.global_position))
 
@@ -31,4 +31,11 @@ func distance_to_player():
 	return position.distance_to(player.position)
 
 func can_be_eaten():
-	return player.size > size
+	return player.current_size >= size
+
+func _on_body_entered(body: Node2D):
+	if body.is_in_group("player"):
+		if can_be_eaten():
+			if body.has_method("consume_enemy"):
+				body.consume_enemy(ember_value)
+				queue_free()
