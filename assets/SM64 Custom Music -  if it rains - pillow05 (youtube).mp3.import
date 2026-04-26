@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvgkj6u40fubk"
+path="res://.godot/imported/SM64 Custom Music -  if it rains - pillow05 (youtube).mp3-3f2625b5c4dcc22bfe6307de43c8a94c.mp3str"
+
+[deps]
+
+source_file="res://assets/SM64 Custom Music -  if it rains - pillow05 (youtube).mp3"
+dest_files=["res://.godot/imported/SM64 Custom Music -  if it rains - pillow05 (youtube).mp3-3f2625b5c4dcc22bfe6307de43c8a94c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
