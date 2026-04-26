@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cgrbsfeu0q5k"]
+
+[ext_resource type="Script" uid="uid://bgif3itwkvi3t" path="res://scripts/enemy/boss/voidfin_manager.gd" id="1_h7spx"]
+[ext_resource type="PackedScene" uid="uid://c4bi8a8imkor6" path="res://scenes/enemy/boss/voidfin.tscn" id="2_7tnp0"]
+
+[node name="VoidfinManager" type="Node" unique_id=1561719976]
+script = ExtResource("1_h7spx")
+voidfin_scene = ExtResource("2_7tnp0")

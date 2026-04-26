@@ -4,14 +4,20 @@
 [ext_resource type="Resource" uid="uid://ceqdtv3x3etxd" path="res://resources/enemy/zone_2/zone2_spawn_data.tres" id="2_8al6t"]
 [ext_resource type="Script" uid="uid://beei6cly37b1" path="res://test_player.gd" id="2_hadne"]
 [ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="3_8al6t"]
+[ext_resource type="PackedScene" uid="uid://cgrbsfeu0q5k" path="res://scenes/enemy/boss/voidfin_manager.tscn" id="5_8al6t"]
+[ext_resource type="PackedScene" uid="uid://sc1x8gf48h8s" path="res://scenes/enemy/boss/red_eyes.tscn" id="6_r4c7t"]
 
 [node name="Zone2" type="Node2D" unique_id=608064837]
 
 [node name="EnemySpawnManager" parent="." unique_id=124304397 instance=ExtResource("1_vqavc")]
 zone_data = ExtResource("2_8al6t")
 
+[node name="VoidfinManager" parent="." unique_id=1561719976 instance=ExtResource("5_8al6t")]
+red_eyes_scene = ExtResource("6_r4c7t")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=125821439 groups=["player"]]
 script = ExtResource("2_hadne")
+size = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1869442804]
 texture = ExtResource("3_8al6t")

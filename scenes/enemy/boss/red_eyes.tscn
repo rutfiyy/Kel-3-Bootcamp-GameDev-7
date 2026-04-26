@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://sc1x8gf48h8s"]
+
+[ext_resource type="Texture2D" uid="uid://d4kvnfhv4toex" path="res://icon.svg" id="1_4ldn2"]
+[ext_resource type="Script" uid="uid://c12yo048f8vvo" path="res://scripts/enemy/boss/red_eyes.gd" id="1_4shra"]
+
+[node name="RedEyes" type="Node2D" unique_id=1555693340]
+script = ExtResource("1_4shra")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834731081]
+self_modulate = Color(1, 1, 0, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4ldn2")
