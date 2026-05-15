@@ -2,7 +2,11 @@ extends Node2D
 
 # Referensi UI (pakai % unique name, aman kalau belum ada)
 @onready var size_label : Label = get_node_or_null("%Label") as Label
+<<<<<<< HEAD
 @onready var ember_bar : TextureProgressBar = get_node_or_null("%EmberBar") as TextureProgressBar
+=======
+@onready var ember_bar : ProgressBar = get_node_or_null("%EmberBar") as ProgressBar
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 @onready var game_over_panel : Panel = get_node_or_null("%GameOverPanel") as Panel
 @onready var level_complete_panel : Panel = get_node_or_null("%LevelCompletePanel") as Panel
 
@@ -31,18 +35,32 @@ func _ready():
 	
 	# Hubungkan tombol-tombol UI
 	if game_over_panel:
+<<<<<<< HEAD
 		var retry_btn = game_over_panel.get_node_or_null("Control/RetryButton") as Button
 		if retry_btn:
 			retry_btn.pressed.connect(_on_retry_pressed)
 		var menu_btn_go = game_over_panel.get_node_or_null("Control/MenuButton") as Button
+=======
+		var retry_btn = game_over_panel.get_node_or_null("VBoxContainer/RetryButton") as Button
+		if retry_btn:
+			retry_btn.pressed.connect(_on_retry_pressed)
+		var menu_btn_go = game_over_panel.get_node_or_null("VBoxContainer/MenuButton") as Button
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 		if menu_btn_go:
 			menu_btn_go.pressed.connect(_on_menu_pressed)
 	
 	if level_complete_panel:
+<<<<<<< HEAD
 		var next_btn = level_complete_panel.get_node_or_null("Control/NextButton") as Button
 		if next_btn:
 			next_btn.pressed.connect(_on_next_level_pressed)
 		var menu_btn_lc = level_complete_panel.get_node_or_null("Control/MenuButton") as Button
+=======
+		var next_btn = level_complete_panel.get_node_or_null("VBoxContainer/NextButton") as Button
+		if next_btn:
+			next_btn.pressed.connect(_on_next_level_pressed)
+		var menu_btn_lc = level_complete_panel.get_node_or_null("VBoxContainer/MenuButton") as Button
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 		if menu_btn_lc:
 			menu_btn_lc.pressed.connect(_on_menu_pressed)
 

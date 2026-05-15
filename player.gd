@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
+<<<<<<< HEAD
 const BULLET_SCENE = preload("res://scenes/bullet.tscn")
 
+=======
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 # Movement
 @export var speed : float = 250.0
 @export var boost_multiplier : float = 2.0
@@ -15,15 +18,19 @@ const BULLET_SCENE = preload("res://scenes/bullet.tscn")
 @export var shrink_rate : float = 0.5
 @export var max_idle_before_death : float = 10.0
 
+<<<<<<< HEAD
 # Shoot
 @export var shoot_cooldown : float = 0.5
 
+=======
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 var current_size : float = base_size
 var is_moving : bool = false
 var idle_timer : float = 0.0
 var dead : bool = false
 var frozen : bool = false
 var last_direction : String = "right"
+<<<<<<< HEAD
 var can_shoot : bool = true
 
 # Untuk menghindari animasi dipanggil ulang setiap frame
@@ -31,6 +38,10 @@ var current_anim : String = ""
 
 # 🎯 Sesuaikan nama node DragonBones kamu di scene
 @onready var armature : DragonBonesArmatureView = $DragonBonesArmatureView
+=======
+
+@onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 @onready var collision_shape : CollisionShape2D = $CollisionShape2D
 @onready var idle_check_timer : Timer = $IdleTimer
 
@@ -40,6 +51,7 @@ signal died
 func _ready():
 	add_to_group("player")
 	update_visual_scale()
+<<<<<<< HEAD
 	idle_check_timer.timeout.connect(_on_idle_timer_timeout)
 	
 	# Perkecil ukuran awal (coba 0.3 atau 0.4)
@@ -57,11 +69,20 @@ func _set_animation(anim_name: String):
 		armature.play(anim_name, -1)   # -1 = loop tanpa batas
 
 # ----- GERAKAN -----
+=======
+	animated_sprite.play("idle")
+	idle_check_timer.timeout.connect(_on_idle_timer_timeout)
+
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 func _physics_process(delta):
 	if dead or frozen:
 		return
 	
+<<<<<<< HEAD
 	# Input 4 arah (air)
+=======
+	# Input 4 arah (air, tanpa gravitasi)
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 	var direction = Vector2(
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")
@@ -74,22 +95,31 @@ func _physics_process(delta):
 	velocity = direction.normalized() * current_speed
 	move_and_slide()
 	
+<<<<<<< HEAD
 	# Animasi
+=======
+	# Update animasi
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 	if direction.length_squared() > 0.01:
 		update_movement_animation(direction)
 	else:
 		play_idle()
 	
+<<<<<<< HEAD
 	# Shoot
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 	
 	# Idle detection (untuk shrink)
+=======
+	# Deteksi idle untuk shrink
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 	var was_moving = is_moving
 	is_moving = direction.length_squared() > 0.01
 	if is_moving and not was_moving:
 		idle_timer = 0.0
 
+<<<<<<< HEAD
 # ----- ANIMASI DRAGONBONES -----
 func update_movement_animation(dir: Vector2):
 	var anim_name = ""
@@ -104,10 +134,24 @@ func update_movement_animation(dir: Vector2):
 		else:
 			# Hadap kiri (flip horizontal)
 			armature.scale = Vector2(-abs(armature.scale.x), armature.scale.y)
+=======
+# ----- ANIMASI -----
+func update_movement_animation(dir: Vector2):
+	if abs(dir.x) >= abs(dir.y):
+		# Gerak horizontal dominan
+		if dir.x > 0:
+			animated_sprite.play("swim_right")
+			animated_sprite.flip_h = false
+			last_direction = "right"
+		else:
+			animated_sprite.play("swim_right")  # pakai animasi yang sama
+			animated_sprite.flip_h = true       # flip biar hadap kiri
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 			last_direction = "left"
 	else:
 		# Gerak vertikal
 		if dir.y > 0:
+<<<<<<< HEAD
 			anim_name = "move_down"
 		else:
 			anim_name = "move_up"
@@ -147,10 +191,30 @@ func consume_ember(value: int):
 	await get_tree().create_timer(0.4).timeout
 	play_idle()   # ini akan memanggil _set_animation("idle")
 	
+=======
+			animated_sprite.play("swim_down")
+		else:
+			animated_sprite.play("swim_up")
+		animated_sprite.flip_h = false
+		last_direction = "down" if dir.y > 0 else "up"
+
+func play_idle():
+	animated_sprite.play("idle")
+	animated_sprite.flip_h = (last_direction == "left")
+
+func consume_ember(value: int):
+	if dead: return
+	animated_sprite.play("eat")
+	animated_sprite.flip_h = (last_direction == "left")
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 	grow(value)
 	idle_timer = 0.0
 	print("Ukuran Angie: ", current_size)
 
+<<<<<<< HEAD
+=======
+# ----- SIZE & SHRINK -----
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 func grow(amount: int):
 	current_size += amount * ember_value * 0.1
 	update_visual_scale()
@@ -163,6 +227,16 @@ func shrink(amount: float):
 	if current_size <= 0.1:
 		die()
 
+<<<<<<< HEAD
+=======
+func update_visual_scale():
+	animated_sprite.scale = Vector2(current_size, current_size)
+	if collision_shape.shape is CircleShape2D:
+		collision_shape.shape.radius = 20.0 * current_size
+	elif collision_shape.shape is RectangleShape2D:
+		collision_shape.shape.size = Vector2(40, 40) * current_size
+
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 func _on_idle_timer_timeout():
 	if dead or frozen: return
 	if not is_moving:
@@ -178,7 +252,10 @@ func die():
 	if dead: return
 	dead = true
 	velocity = Vector2.ZERO
+<<<<<<< HEAD
 	# Tidak perlu armature.stop() agar tidak error
+=======
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 	died.emit()
 
 func freeze():
@@ -186,6 +263,7 @@ func freeze():
 
 func unfreeze():
 	frozen = false
+<<<<<<< HEAD
 
 # ----- SHOOT (EMBER SHOT) -----
 func shoot():
@@ -215,3 +293,5 @@ func shoot():
 	
 	await get_tree().create_timer(shoot_cooldown).timeout
 	can_shoot = true
+=======
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d

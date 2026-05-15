@@ -10,15 +10,25 @@ config_version=5
 
 [application]
 
+<<<<<<< HEAD
 config/name="Angie Ember Depth"
 run/main_scene="uid://giqrscxsyoui"
+=======
+config/name="AngieEmberDepths"
+run/main_scene="uid://c2g8ecd6hpuk2"
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
+<<<<<<< HEAD
 window/size/viewport_width=1280
 window/size/viewport_height=720
+=======
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+>>>>>>> 4ae7846fd1a63e11ed05b0d54d54b484105bf62d
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
