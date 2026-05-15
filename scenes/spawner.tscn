@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://muc0td7yo3df"]
+
+[ext_resource type="Script" uid="uid://cf2roj6w3gtmh" path="res://spawner.gd" id="1_2vbf6"]
+[ext_resource type="PackedScene" uid="uid://c43xi5mader12" path="res://scenes/ember.tscn" id="2_ik2nu"]
+
+[node name="Spawner" type="Node2D" unique_id=373084076]
+script = ExtResource("1_2vbf6")
+ember_scene = ExtResource("2_ik2nu")
+spawn_area = Rect2(100, 100, 1080, 520)
+
+[node name="Timer" type="Timer" parent="." unique_id=796437068]
+wait_time = 5.0
+autostart = true

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bgtpvqih666ac"]
+
+[ext_resource type="PackedScene" uid="uid://bcnhwgx4e2tex" path="res://dragon_bones_armature_view.tscn" id="1_c6gwx"]
+[ext_resource type="Script" path="res://dragon_bones_armature_view.gd" id="2_2dftf"]
+[ext_resource type="Script" path="res://button.gd" id="3_bcbcq"]
+
+[node name="Node2D" type="Node2D" unique_id=1295180958]
+
+[node name="DragonBonesArmatureView" parent="." unique_id=272335600 instance=ExtResource("1_c6gwx")]
+position = Vector2(575, 320)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("2_2dftf")
+
+[node name="Button" type="Button" parent="." unique_id=2068546120 node_paths=PackedStringArray("dragonBones")]
+offset_left = 42.0
+offset_top = 533.0
+offset_right = 136.0
+offset_bottom = 608.0
+theme_override_font_sizes/font_size = 36
+text = "idle"
+script = ExtResource("3_bcbcq")
+dragonBones = NodePath("../DragonBonesArmatureView")
+
+[node name="Button2" type="Button" parent="." unique_id=1779448620 node_paths=PackedStringArray("dragonBones")]
+offset_left = 209.0
+offset_top = 540.0
+offset_right = 467.0
+offset_bottom = 615.0
+theme_override_font_sizes/font_size = 36
+text = "move_forward"
+script = ExtResource("3_bcbcq")
+dragonBones = NodePath("../DragonBonesArmatureView")
+
+[node name="Button3" type="Button" parent="." unique_id=1215476891 node_paths=PackedStringArray("dragonBones")]
+offset_left = 540.0
+offset_top = 539.0
+offset_right = 798.0
+offset_bottom = 614.0
+theme_override_font_sizes/font_size = 36
+text = "move_up"
+script = ExtResource("3_bcbcq")
+dragonBones = NodePath("../DragonBonesArmatureView")
+
+[node name="Button4" type="Button" parent="." unique_id=1171435766 node_paths=PackedStringArray("dragonBones")]
+offset_left = 848.0
+offset_top = 538.0
+offset_right = 1106.0
+offset_bottom = 613.0
+theme_override_font_sizes/font_size = 36
+text = "move_down"
+script = ExtResource("3_bcbcq")
+dragonBones = NodePath("../DragonBonesArmatureView")

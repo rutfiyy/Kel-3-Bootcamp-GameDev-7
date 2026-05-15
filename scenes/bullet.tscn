@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://y3y0axcsm3ug"]
+
+[ext_resource type="Texture2D" uid="uid://bnjyljpf0ss0h" path="res://Assets/Gemini_Generated_Image_1vich51vich51vic (1).png" id="1_mkf8s"]
+[ext_resource type="Script" uid="uid://bp2iwvcitok0p" path="res://scenes/bullet.gd" id="1_y25gk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y25gk"]
+radius = 5.0
+
+[node name="Bullet" type="Area2D" unique_id=1640791416]
+script = ExtResource("1_y25gk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1560494492]
+shape = SubResource("CircleShape2D_y25gk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=651191650]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_mkf8s")

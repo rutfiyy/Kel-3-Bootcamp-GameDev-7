@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://hxluq2gukkdx"]
+
+[ext_resource type="Script" uid="uid://00su8v8jodj7" path="res://player.gd" id="1_3vyb7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 50.0
+
+[sub_resource type="DragonBonesFactory" id="DragonBonesFactory_3vyb7"]
+dragon_bones_ske_file_list = PackedStringArray("res://scenes/angieAnim_ske.json")
+texture_atlas_json_file_list = PackedStringArray("res://scenes/angieAnim_tex.json")
+
+[node name="Player" type="CharacterBody2D" unique_id=1153191769]
+script = ExtResource("1_3vyb7")
+
+[node name="IdleTimer" type="Timer" parent="." unique_id=2075544163]
+wait_time = 0.1
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=57989693]
+shape = SubResource("CircleShape2D_g2els")
+
+[node name="DragonBonesArmatureView" type="DragonBonesArmatureView" parent="." unique_id=1859544515]
+factory = SubResource("DragonBonesFactory_3vyb7")
+animation_loop_count = 5
+armature_settings = {
+&"current_animation": "[none]",
+"sub_armatures": {}
+}
+scale = Vector2(0.2, 0.2)

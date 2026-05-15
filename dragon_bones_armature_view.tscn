@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bcnhwgx4e2tex"]
+
+[ext_resource type="Script" path="res://dragon_bones_armature_view.gd" id="1_r6otv"]
+
+[sub_resource type="DragonBonesFactory" id="DragonBonesFactory_s3nob"]
+dragon_bones_ske_file_list = PackedStringArray("res://scenes/angieAnim_ske.json")
+texture_atlas_json_file_list = PackedStringArray("res://scenes/angieAnim_tex.json", "")
+
+[node name="DragonBonesArmatureView" type="DragonBonesArmatureView" unique_id=272335600]
+factory = SubResource("DragonBonesFactory_s3nob")
+armature_settings = {
+&"current_animation": "[none]",
+"sub_armatures": {}
+}
+script = ExtResource("1_r6otv")
