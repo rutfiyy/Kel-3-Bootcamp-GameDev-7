@@ -1,0 +1,516 @@
+[gd_scene format=3 uid="uid://ex8mr37dxv3u"]
+
+[ext_resource type="Script" uid="uid://cpxaflsthdiir" path="res://settings_popup.gd" id="1_10may"]
+[ext_resource type="Texture2D" uid="uid://cyqjs60bos5wv" path="res://Assets/UI/Main Menu/Main Menu Background.jpg" id="1_eh5sn"]
+[ext_resource type="Texture2D" uid="uid://cumr0rpg33s12" path="res://Assets/UI/Settings Button/Options Background.png" id="2_10may"]
+[ext_resource type="Texture2D" uid="uid://b836dl4agj5jm" path="res://Assets/UI/Settings Button/Options Tab Selected.png" id="3_a43k4"]
+[ext_resource type="Texture2D" uid="uid://b1x7rwxx50f3" path="res://Assets/UI/Settings Button/Options Slider Input.png" id="4_7gkj2"]
+[ext_resource type="Texture2D" uid="uid://bhd2otvbh66kw" path="res://Assets/UI/Settings Button/Options Input Wide.png" id="5_pb312"]
+[ext_resource type="Texture2D" uid="uid://cnwy5qh10nyh3" path="res://Assets/UI/Settings Button/Checkbox True.png" id="6_he1e8"]
+[ext_resource type="Texture2D" uid="uid://mxrh7akg00vf" path="res://Assets/UI/Settings Button/Checkbox False.png" id="7_jpdr8"]
+[ext_resource type="Texture2D" uid="uid://xmm2hryufuci" path="res://Assets/UI/Settings Button/Options Tab Unselected.png" id="8_7wuk4"]
+[ext_resource type="Texture2D" uid="uid://1n5rks0qwc0k" path="res://Button/Angie UI Button v1.png" id="9_xtb8d"]
+[ext_resource type="Texture2D" uid="uid://5da8i6vlm5tu" path="res://Button/Angie UI Button v2.png" id="10_3j63l"]
+[ext_resource type="Texture2D" uid="uid://dw8307i4tr5ji" path="res://Button/Angie UI Button v3.png" id="11_a26bn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_feoxo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i3xm"]
+atlas = ExtResource("5_pb312")
+region = Rect2(3.805, 0, 0, 0)
+margin = Rect2(-15.925, 0, 0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vm7mb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ply3p"]
+atlas = ExtResource("6_he1e8")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blyvc"]
+atlas = ExtResource("7_jpdr8")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3s2oa"]
+
+[node name="Control" type="PopupPanel" unique_id=1502477883]
+oversampling_override = 1.0
+size = Vector2i(1280, 720)
+script = ExtResource("1_10may")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1151161395]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_eh5sn")
+
+[node name="ContentPanel" type="Panel" parent="." unique_id=931693910]
+process_mode = 3
+z_index = 11
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="Control" parent="ContentPanel" unique_id=2059553506]
+process_mode = 3
+z_index = 11
+anchors_preset = 0
+offset_left = 336.0
+offset_top = 144.0
+offset_right = 936.0
+offset_bottom = 544.0
+mouse_filter = 2
+
+[node name="OptionsBackground" type="Sprite2D" parent="ContentPanel/VBoxContainer" unique_id=396555389]
+z_index = 11
+position = Vector2(288, 216)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_10may")
+
+[node name="Label" type="Label" parent="ContentPanel/VBoxContainer" unique_id=1677055798]
+z_index = 11
+layout_mode = 0
+offset_left = 184.0
+offset_top = -8.0
+offset_right = 376.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 36
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TabContainer" type="Control" parent="ContentPanel/VBoxContainer" unique_id=255355668]
+z_index = 11
+anchors_preset = 0
+offset_left = 96.0
+offset_top = 48.0
+offset_right = 496.0
+offset_bottom = 79.0
+mouse_filter = 2
+
+[node name="OptionsTabSelected" type="Sprite2D" parent="ContentPanel/VBoxContainer/TabContainer" unique_id=443971972]
+z_index = 11
+position = Vector2(58.208366, 12.4999895)
+scale = Vector2(0.34166667, 0.34166667)
+texture = ExtResource("3_a43k4")
+
+[node name="BasicTab" type="TabBar" parent="ContentPanel/VBoxContainer/TabContainer" unique_id=1253335673]
+process_mode = 3
+z_index = 11
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_bottom = 1.0
+
+[node name="VBoxContainer" type="Control" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab" unique_id=899671705]
+z_index = 11
+anchors_preset = 0
+offset_top = 80.0
+offset_right = 400.0
+offset_bottom = 336.0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="Control" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer" unique_id=1518717434]
+z_index = 11
+anchors_preset = 0
+offset_right = 392.0
+offset_bottom = 23.0
+mouse_filter = 2
+
+[node name="OptionsSliderInput" type="Sprite2D" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer" unique_id=1926381866]
+z_index = 11
+position = Vector2(368, 8.000006)
+scale = Vector2(0.26666668, 0.26666668)
+texture = ExtResource("4_7gkj2")
+
+[node name="Label" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer" unique_id=1849681620]
+z_index = 11
+layout_mode = 0
+offset_top = -8.0
+offset_right = 46.0
+offset_bottom = 23.0
+text = "Music"
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer" unique_id=1193024156]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 128.0
+offset_right = 336.0
+offset_bottom = 16.0
+size_flags_horizontal = 3
+
+[node name="MusicValue" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer" unique_id=118815167]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 352.0
+offset_top = -5.015
+offset_right = 384.0
+offset_bottom = 17.985
+size_flags_horizontal = 0
+text = "25"
+label_settings = SubResource("LabelSettings_feoxo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="Control" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer" unique_id=1363791604]
+z_index = 11
+anchors_preset = 0
+offset_top = 30.0
+offset_right = 392.0
+offset_bottom = 52.999992
+mouse_filter = 2
+
+[node name="OptionsSliderInput" type="Sprite2D" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer2" unique_id=393326744]
+z_index = 11
+position = Vector2(368, 8.000006)
+scale = Vector2(0.26666668, 0.26666668)
+texture = ExtResource("4_7gkj2")
+
+[node name="Label" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer2" unique_id=328361131]
+z_index = 11
+layout_mode = 0
+offset_top = -8.0
+offset_right = 46.0
+offset_bottom = 23.0
+text = "SFX"
+vertical_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer2" unique_id=1469742476]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 128.0
+offset_right = 336.0
+offset_bottom = 16.0
+size_flags_horizontal = 3
+
+[node name="SFXValue" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer2" unique_id=391655035]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 352.0
+offset_top = -5.015
+offset_right = 384.0
+offset_bottom = 17.985
+size_flags_horizontal = 0
+text = "25"
+label_settings = SubResource("LabelSettings_feoxo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="Control" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer" unique_id=539369157]
+z_index = 11
+anchors_preset = 0
+offset_top = 60.0
+offset_right = 392.0
+offset_bottom = 82.999985
+mouse_filter = 2
+
+[node name="OptionsSliderInput" type="Sprite2D" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer3" unique_id=941728993]
+z_index = 11
+position = Vector2(368, 8.000006)
+scale = Vector2(0.26666668, 0.26666668)
+texture = ExtResource("4_7gkj2")
+
+[node name="Label" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer3" unique_id=1203907910]
+z_index = 11
+layout_mode = 0
+offset_top = -8.0
+offset_right = 46.0
+offset_bottom = 23.0
+text = "Brightness"
+vertical_alignment = 1
+
+[node name="BrightnessSlider" type="HSlider" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer3" unique_id=1269195825]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 128.0
+offset_right = 336.0
+offset_bottom = 16.0
+size_flags_horizontal = 3
+
+[node name="BrightnessValue" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer3" unique_id=1881504527]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 352.0
+offset_top = -5.015
+offset_right = 384.0
+offset_bottom = 17.985
+size_flags_horizontal = 0
+text = "25"
+label_settings = SubResource("LabelSettings_feoxo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="Control" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer" unique_id=954668254]
+z_index = 11
+anchors_preset = 0
+offset_top = 90.0
+offset_right = 392.0
+offset_bottom = 113.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer4" unique_id=450952561]
+z_index = 11
+layout_mode = 0
+offset_right = 83.0
+offset_bottom = 23.0
+text = "Resolution"
+
+[node name="ResolutionOption" type="OptionButton" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer4" unique_id=1899992852]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42900002
+anchor_right = 0.75500005
+anchor_bottom = 1.0
+offset_left = -24.168015
+offset_top = -2.0000134
+offset_right = -31.960022
+offset_bottom = -1.0000134
+theme_override_constants/h_separation = -90
+theme_override_constants/icon_max_width = 134
+theme_override_font_sizes/font_size = 16
+theme_override_icons/icon = SubResource("AtlasTexture_4i3xm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vm7mb")
+theme_override_constants/arrow_margin = 7
+item_count = 3
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+
+[node name="FullscreenCheck" type="CheckBox" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer4" unique_id=544725784]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 272.0
+offset_top = -10.0
+offset_right = 310.0
+offset_bottom = 28.0
+theme_override_constants/icon_max_width = 30
+theme_override_icons/checked = SubResource("AtlasTexture_ply3p")
+theme_override_icons/unchecked = SubResource("AtlasTexture_blyvc")
+action_mode = 0
+button_mask = 2
+
+[node name="Label2" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer4/FullscreenCheck" unique_id=1158731195]
+z_index = 11
+layout_mode = 0
+offset_left = 48.0
+offset_top = 8.0
+offset_right = 116.0
+offset_bottom = 32.0
+text = "On"
+
+[node name="HBoxContainer5" type="Control" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer" unique_id=1942054568]
+z_index = 11
+anchors_preset = 0
+offset_top = 128.0
+offset_right = 392.0
+offset_bottom = 152.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer5" unique_id=1910746933]
+z_index = 11
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+text = "Subtitles"
+
+[node name="SubtitlesCheck" type="CheckBox" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer5" unique_id=1401366819]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 184.0
+offset_top = -8.0
+offset_right = 222.0
+offset_bottom = 30.0
+theme_override_constants/icon_max_width = 30
+theme_override_icons/checked = SubResource("AtlasTexture_ply3p")
+theme_override_icons/unchecked = SubResource("AtlasTexture_blyvc")
+button_pressed = true
+action_mode = 0
+button_mask = 2
+
+[node name="Label2" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer5/SubtitlesCheck" unique_id=665606312]
+z_index = 11
+layout_mode = 0
+offset_left = 48.0
+offset_top = 8.0
+offset_right = 116.0
+offset_bottom = 32.0
+text = "On"
+
+[node name="HBoxContainer6" type="Control" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer" unique_id=930549290]
+z_index = 11
+anchors_preset = 0
+offset_top = 160.0
+offset_right = 392.0
+offset_bottom = 184.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer6" unique_id=1237626435]
+z_index = 11
+layout_mode = 0
+offset_right = 68.0
+offset_bottom = 24.0
+text = "Vertical Sync"
+
+[node name="VsyncCheck" type="CheckBox" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer6" unique_id=54207436]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 184.0
+offset_top = -7.9999943
+offset_right = 222.0
+offset_bottom = 30.000006
+theme_override_constants/icon_max_width = 30
+theme_override_icons/checked = SubResource("AtlasTexture_ply3p")
+theme_override_icons/unchecked = SubResource("AtlasTexture_blyvc")
+action_mode = 0
+button_mask = 2
+
+[node name="Label2" type="Label" parent="ContentPanel/VBoxContainer/TabContainer/BasicTab/VBoxContainer/HBoxContainer6" unique_id=890336083]
+z_index = 11
+layout_mode = 0
+offset_left = 232.0
+offset_right = 300.0
+offset_bottom = 24.0
+text = "Off"
+
+[node name="TabBar2" type="TabBar" parent="ContentPanel/VBoxContainer/TabContainer" unique_id=231980919]
+visible = false
+z_index = 11
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+
+[node name="OptionsTabUnselected" type="Sprite2D" parent="ContentPanel/VBoxContainer/TabContainer" unique_id=2123577990]
+z_index = 11
+position = Vector2(184, 12)
+scale = Vector2(0.3249999, 0.33333337)
+texture = ExtResource("8_7wuk4")
+
+[node name="TabBar" type="TabBar" parent="ContentPanel/VBoxContainer/TabContainer" unique_id=591082791]
+visible = false
+z_index = 11
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+
+[node name="OptionsTabUnselected2" type="Sprite2D" parent="ContentPanel/VBoxContainer/TabContainer" unique_id=1738154591]
+z_index = 11
+position = Vector2(312, 12.000004)
+scale = Vector2(0.3249999, 0.33333337)
+texture = ExtResource("8_7wuk4")
+
+[node name="Label" type="Label" parent="ContentPanel/VBoxContainer/TabContainer" unique_id=2136042952]
+z_index = 11
+layout_mode = 0
+offset_left = 32.0
+offset_right = 80.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 18
+text = "Basic"
+
+[node name="Label2" type="Label" parent="ContentPanel/VBoxContainer/TabContainer" unique_id=2098609320]
+z_index = 11
+layout_mode = 0
+offset_left = 288.0
+offset_right = 336.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 18
+text = "Input"
+
+[node name="Label3" type="Label" parent="ContentPanel/VBoxContainer/TabContainer" unique_id=1873375106]
+z_index = 11
+layout_mode = 0
+offset_left = 144.0
+offset_right = 230.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 18
+text = "Advanced"
+
+[node name="HBoxContainer" type="Control" parent="ContentPanel/VBoxContainer" unique_id=1996260157]
+process_mode = 3
+z_index = 11
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 384.0
+offset_right = 504.0
+offset_bottom = 426.0
+mouse_filter = 2
+
+[node name="AngieUiButtonV1" type="Sprite2D" parent="ContentPanel/VBoxContainer/HBoxContainer" unique_id=1854551601]
+z_index = 11
+position = Vector2(64, 24)
+scale = Vector2(0.265625, 0.265625)
+texture = ExtResource("9_xtb8d")
+
+[node name="AngieUiButtonV2" type="Sprite2D" parent="ContentPanel/VBoxContainer/HBoxContainer" unique_id=738428099]
+z_index = 11
+position = Vector2(208, 24)
+scale = Vector2(0.28125003, 0.28125003)
+texture = ExtResource("10_3j63l")
+
+[node name="AngieUiButtonV3" type="Sprite2D" parent="ContentPanel/VBoxContainer/HBoxContainer" unique_id=1694445009]
+z_index = 11
+position = Vector2(352, 24)
+scale = Vector2(0.28125003, 0.28125003)
+texture = ExtResource("11_a26bn")
+
+[node name="CancelButton" type="Button" parent="ContentPanel/VBoxContainer/HBoxContainer" unique_id=1644756816]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 24.0
+offset_right = 104.0
+offset_bottom = 40.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3s2oa")
+text = "Cancel"
+
+[node name="OkButton" type="Button" parent="ContentPanel/VBoxContainer/HBoxContainer" unique_id=344939714]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 160.0
+offset_top = 8.0
+offset_right = 244.0
+offset_bottom = 40.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3s2oa")
+text = "Ok"
+
+[node name="ApplyButton" type="Button" parent="ContentPanel/VBoxContainer/HBoxContainer" unique_id=1412177359]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 312.0
+offset_right = 392.0
+offset_bottom = 40.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3s2oa")
+text = "Apply"

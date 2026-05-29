@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciu87phn0nwl1"
-path="res://.godot/imported/angieLarge_288px.png-2bf9dc81246f2c4a4a05d5d28523269e.ctex"
+path="res://.godot/imported/angieLarge_288px.png-98743d1ec0947d39e19778ad3eef6131.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/angieLarge_288px.png"
-dest_files=["res://.godot/imported/angieLarge_288px.png-2bf9dc81246f2c4a4a05d5d28523269e.ctex"]
+source_file="res://Assets/angieLarge_288px.png"
+dest_files=["res://.godot/imported/angieLarge_288px.png-98743d1ec0947d39e19778ad3eef6131.ctex"]
 
 [params]
 

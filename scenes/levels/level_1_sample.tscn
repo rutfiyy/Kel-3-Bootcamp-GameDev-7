@@ -1,0 +1,387 @@
+[gd_scene format=3 uid="uid://b1x3kj5mias82"]
+
+[ext_resource type="PackedScene" uid="uid://dn2qrtes2nsj6" path="res://scenes/levels/level_1_3_background.tscn" id="1_5ofsc"]
+[ext_resource type="PackedScene" uid="uid://p2uv2w05rxdk" path="res://scenes/levels/level_1_1_background.tscn" id="1_82qsc"]
+[ext_resource type="Script" uid="uid://stapc8cjnb4n" path="res://scripts/level_1_sample.gd" id="1_bgggw"]
+[ext_resource type="PackedScene" uid="uid://ekt0ocxf40yo" path="res://scenes/levels/level_1_2_background.tscn" id="2_ebb0c"]
+[ext_resource type="PackedScene" uid="uid://hxluq2gukkdx" path="res://scenes/player.tscn" id="3_mtc3j"]
+[ext_resource type="Script" uid="uid://cmllyi08oqq5" path="res://scenes/camera_2d.gd" id="4_2a53j"]
+[ext_resource type="PackedScene" uid="uid://w0xb2kca8bxm" path="res://scenes/levels/level_1_4_background.tscn" id="4_x0c2r"]
+[ext_resource type="Texture2D" uid="uid://b18k62o2ul46k" path="res://Assets/backgrounds/Border.png" id="5_8b3n0"]
+[ext_resource type="Texture2D" uid="uid://cgcq8bvgum7dr" path="res://Assets/backgrounds/Black.png" id="6_xu003"]
+[ext_resource type="Texture2D" uid="uid://dnvnbi0ga5s0t" path="res://Assets/UI/Pop Up Menu/Pop up Menu Long.png" id="7_6c8pm"]
+[ext_resource type="PackedScene" uid="uid://by55ay4uvo7og" path="res://scenes/levels/level_1_1_foreground.tscn" id="7_hwhck"]
+[ext_resource type="Texture2D" uid="uid://bfeyd3lrjjf0b" path="res://Assets/UI/Pop Up Menu/Angie Defeat.png" id="8_x58ih"]
+[ext_resource type="PackedScene" uid="uid://50655o7iabl2" path="res://scenes/levels/level_1_3_foreground.tscn" id="9_b606m"]
+[ext_resource type="Texture2D" uid="uid://1n5rks0qwc0k" path="res://Button/Angie UI Button v1.png" id="9_qurrc"]
+[ext_resource type="FontFile" uid="uid://mwmnjde7m5ou" path="res://geometric-sans-serif-v1/geometric.otf" id="10_0emuy"]
+[ext_resource type="PackedScene" uid="uid://di5s0wvh5hq8l" path="res://scenes/levels/level_1_2_foreground.tscn" id="10_h01br"]
+[ext_resource type="Texture2D" uid="uid://vxf6b7ji7rty" path="res://Assets/UI/Pop Up Menu/Angie Level Completed.png" id="11_bgggw"]
+[ext_resource type="Texture2D" uid="uid://b167fkgedjg6b" path="res://Assets/UI/HUD/Angie UI HUD.png" id="12_2tvej"]
+[ext_resource type="PackedScene" uid="uid://daw0a5w1ejkay" path="res://scenes/levels/level_1_4_foreground.tscn" id="12_etank"]
+[ext_resource type="Texture2D" uid="uid://cr1h8aovbronx" path="res://Assets/angieSmall_96px.png" id="13_psqv8"]
+[ext_resource type="Texture2D" uid="uid://c46yne86qbtm6" path="res://Assets/UI/HUD/Angie UI HUD Ember Meter.png" id="14_33gpr"]
+[ext_resource type="Texture2D" uid="uid://k4vjdqst1cc1" path="res://Assets/UI/HUD/Angie UI HUD Shield Meter.png" id="15_rcrtk"]
+[ext_resource type="Texture2D" uid="uid://dtbwbkoh4ujfn" path="res://Button/Menu Button.png" id="16_yq0ce"]
+[ext_resource type="PackedScene" uid="uid://cdjjxor8ygrxh" path="res://scenes/finley.tscn" id="23_0emuy"]
+[ext_resource type="PackedScene" uid="uid://bwjd2auaoron7" path="res://scenes/tiny.tscn" id="24_bgggw"]
+[ext_resource type="PackedScene" uid="uid://clwokji2pwnwl" path="res://scenes/glowy.tscn" id="25_2tvej"]
+[ext_resource type="AudioStream" uid="uid://cvgkj6u40fubk" path="res://Assets/Music/SM64 Custom Music -  if it rains - pillow05 (youtube).mp3" id="27_2tvej"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufevr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ssxrb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyjs4"]
+size = Vector2(299.2401, 544.1017)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewdhd"]
+size = Vector2(866.0005, 4081.5)
+
+[node name="Level_1_Sample" type="Node2D" unique_id=768957968]
+script = ExtResource("1_bgggw")
+
+[node name="Backgrounds" type="Node2D" parent="." unique_id=546685210]
+
+[node name="Level_1_1_Background" parent="Backgrounds" unique_id=1873588910 instance=ExtResource("1_82qsc")]
+
+[node name="Level_1_2_Background" parent="Backgrounds" unique_id=1371329639 instance=ExtResource("2_ebb0c")]
+position = Vector2(4603, -1)
+
+[node name="Level_1_3_Background" parent="Backgrounds" unique_id=594699887 instance=ExtResource("1_5ofsc")]
+position = Vector2(7656, -1)
+
+[node name="Level_1_4_Background" parent="Backgrounds" unique_id=1896166870 instance=ExtResource("4_x0c2r")]
+position = Vector2(12326, 0)
+
+[node name="Player" parent="." unique_id=1153191769 instance=ExtResource("3_mtc3j")]
+top_level = true
+position = Vector2(344, 424)
+idle_time_to_shrink = 100.0
+max_idle_before_death = 100.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=476660095]
+light_mask = 256
+visibility_layer = 256
+z_index = 100
+limit_right = 20000
+limit_bottom = 2990
+drag_left_margin = 0.35
+drag_right_margin = 0.35
+script = ExtResource("4_2a53j")
+player_path = NodePath("../Player")
+map_left = -1080.0
+map_right = 20000.0
+map_top = -1080.0
+map_bottom = 2000.0
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1697792957]
+unique_name_in_owner = true
+layer = 5
+
+[node name="GameOverPanel" type="Panel" parent="UI" unique_id=1070471214]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(0, 0, 0, 0.5058824)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="UI/GameOverPanel" unique_id=1577626750]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PopUpMenuLong" type="Sprite2D" parent="UI/GameOverPanel/Control" unique_id=1633389568]
+position = Vector2(656, 339.99997)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_6c8pm")
+
+[node name="AngieDefeat" type="Sprite2D" parent="UI/GameOverPanel/Control" unique_id=1957585613]
+position = Vector2(647.99994, 303.99997)
+scale = Vector2(0.5187499, 0.5187499)
+texture = ExtResource("8_x58ih")
+
+[node name="AngieUiButtonV1" type="Sprite2D" parent="UI/GameOverPanel/Control" unique_id=739062925]
+position = Vector2(656, 408)
+scale = Vector2(0.2812501, 0.2812501)
+texture = ExtResource("9_qurrc")
+
+[node name="AngieUiButtonV2" type="Sprite2D" parent="UI/GameOverPanel/Control" unique_id=544114976]
+position = Vector2(656, 463.99997)
+scale = Vector2(0.2812501, 0.2812501)
+texture = ExtResource("9_qurrc")
+
+[node name="RetryButton" type="Button" parent="UI/GameOverPanel/Control" unique_id=761799384]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 584.0
+offset_top = 392.0
+offset_right = 784.0
+offset_bottom = 432.0
+scale = Vector2(0.7, 0.7)
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("10_0emuy")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_ufevr")
+text = "Retry"
+
+[node name="LCMenuButton" type="Button" parent="UI/GameOverPanel/Control" unique_id=1253818174]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 584.0
+offset_top = 448.0
+offset_right = 784.0
+offset_bottom = 488.0
+scale = Vector2(0.7, 0.7)
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("10_0emuy")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_ufevr")
+text = "MainMenu"
+
+[node name="Label" type="Label" parent="UI/GameOverPanel/Control" unique_id=1975504476]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 184.0
+offset_right = 1480.0
+offset_bottom = 248.0
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("10_0emuy")
+theme_override_font_sizes/font_size = 50
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="LevelCompletePanel" type="Panel" parent="UI" unique_id=84822752]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(0, 0, 0, 0.5019608)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="UI/LevelCompletePanel" unique_id=1306685775]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PopUpMenuLong" type="Sprite2D" parent="UI/LevelCompletePanel/Control" unique_id=778249939]
+position = Vector2(656, 339.99997)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_6c8pm")
+
+[node name="AngieLevelCompleted" type="Sprite2D" parent="UI/LevelCompletePanel/Control" unique_id=1889472442]
+position = Vector2(648, 328.00003)
+scale = Vector2(0.519, 0.519)
+texture = ExtResource("11_bgggw")
+
+[node name="Label" type="Label" parent="UI/LevelCompletePanel/Control" unique_id=774420888]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 184.0
+offset_right = 1480.0
+offset_bottom = 248.0
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("10_0emuy")
+theme_override_font_sizes/font_size = 50
+text = "Game 
+Complete
+"
+horizontal_alignment = 1
+
+[node name="AngieUiButtonV3" type="Sprite2D" parent="UI/LevelCompletePanel/Control" unique_id=90286533]
+position = Vector2(656, 408)
+scale = Vector2(0.2812501, 0.2812501)
+texture = ExtResource("9_qurrc")
+
+[node name="AngieUiButtonV4" type="Sprite2D" parent="UI/LevelCompletePanel/Control" unique_id=338240506]
+position = Vector2(656, 463.99997)
+scale = Vector2(0.2812501, 0.2812501)
+texture = ExtResource("9_qurrc")
+
+[node name="NextButton" type="Button" parent="UI/LevelCompletePanel/Control" unique_id=232565072]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 584.0
+offset_top = 392.0
+offset_right = 784.0
+offset_bottom = 432.0
+scale = Vector2(0.7, 0.7)
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("10_0emuy")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_ufevr")
+text = "Next Level"
+
+[node name="GOMenuButton" type="Button" parent="UI/LevelCompletePanel/Control" unique_id=1992423994]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 584.0
+offset_top = 447.99997
+offset_right = 784.0
+offset_bottom = 487.99997
+scale = Vector2(0.7, 0.7)
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("10_0emuy")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_ufevr")
+text = "MainMenu"
+
+[node name="Control" type="Control" parent="UI" unique_id=1357013387]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 1312.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AngieUiHud" type="Sprite2D" parent="UI/Control" unique_id=149656946]
+z_index = -1
+position = Vector2(184, 48)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_2tvej")
+
+[node name="AngieIcon" type="TextureRect" parent="UI/Control" unique_id=1285025784]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 88.0
+texture = ExtResource("13_psqv8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EmberBar" type="TextureProgressBar" parent="UI/Control" unique_id=1219530487]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 102.0
+offset_top = 22.4
+offset_right = 341.5
+offset_bottom = 54.199997
+nine_patch_stretch = true
+texture_progress = ExtResource("14_33gpr")
+texture_progress_offset = Vector2(-3, 0)
+
+[node name="BoostBar" type="TextureProgressBar" parent="UI/Control" unique_id=609086964]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 102.0
+offset_top = 61.5
+offset_right = 341.5
+offset_bottom = 78.5
+nine_patch_stretch = true
+texture_progress = ExtResource("15_rcrtk")
+texture_progress_offset = Vector2(-3, 0)
+
+[node name="SettingsButton" type="Button" parent="UI/Control" unique_id=42882297]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1120.0
+offset_top = -16.0
+offset_right = 1632.0
+offset_bottom = 496.0
+scale = Vector2(0.21874994, 0.21874994)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ssxrb")
+icon = ExtResource("16_yq0ce")
+
+[node name="Border Left Right" type="Node2D" parent="." unique_id=758134732]
+
+[node name="Fade Left" type="Sprite2D" parent="Border Left Right" unique_id=744756741]
+z_index = 1
+position = Vector2(53, 306.00003)
+scale = Vector2(1.1655275, 7.268555)
+texture = ExtResource("5_8b3n0")
+
+[node name="Black Left" type="Sprite2D" parent="Border Left Right" unique_id=684268001]
+z_index = 1
+position = Vector2(-983, 330.00003)
+scale = Vector2(2.9482427, 7.382812)
+texture = ExtResource("6_xu003")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Border Left Right/Black Left" unique_id=834794900]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border Left Right/Black Left/StaticBody2D" unique_id=1120930438]
+position = Vector2(139.62006, -8.465614)
+shape = SubResource("RectangleShape2D_fyjs4")
+
+[node name="Fade Right" type="Sprite2D" parent="Border Left Right" unique_id=472695869]
+z_index = 1
+position = Vector2(14282.1875, 353.18414)
+rotation = -3.1415925
+scale = Vector2(0.96166843, 7.4890003)
+texture = ExtResource("5_8b3n0")
+
+[node name="Black Right" type="Sprite2D" parent="Border Left Right" unique_id=1202018705]
+z_index = 1
+position = Vector2(15247.1875, 346.97208)
+scale = Vector2(2.9482427, 7.382812)
+texture = ExtResource("6_xu003")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Border Left Right/Black Right" unique_id=1244297204]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border Left Right/Black Right/StaticBody2D" unique_id=1261107151]
+position = Vector2(-150.25879, -13.985174)
+scale = Vector2(0.33918512, 0.13544975)
+shape = SubResource("RectangleShape2D_ewdhd")
+
+[node name="Level_1_1_Foreground" parent="." unique_id=547486746 instance=ExtResource("7_hwhck")]
+z_index = 1
+
+[node name="level_1_3_foreground" parent="." unique_id=1625812234 instance=ExtResource("9_b606m")]
+position = Vector2(7869, -156)
+
+[node name="level_1_2_foreground" parent="." unique_id=809698309 instance=ExtResource("10_h01br")]
+position = Vector2(4048, 0)
+
+[node name="level_1_4_foreground" parent="." unique_id=1567083575 instance=ExtResource("12_etank")]
+position = Vector2(12296, 0)
+
+[node name="Enemy" type="Node2D" parent="." unique_id=501434350]
+position = Vector2(14804.188, 243.72217)
+
+[node name="Finley" parent="Enemy" unique_id=141814402 instance=ExtResource("23_0emuy")]
+position = Vector2(-12004.188, -203.72217)
+
+[node name="Finley2" parent="Enemy" unique_id=1101970169 instance=ExtResource("23_0emuy")]
+position = Vector2(-1252.1885, 28.277832)
+
+[node name="Finley3" parent="Enemy" unique_id=992524333 instance=ExtResource("23_0emuy")]
+position = Vector2(-4980.1885, -3.722168)
+
+[node name="Tiny" parent="Enemy" unique_id=521036032 instance=ExtResource("24_bgggw")]
+position = Vector2(-8660.188, 60.277832)
+
+[node name="Tiny2" parent="Enemy" unique_id=830296540 instance=ExtResource("24_bgggw")]
+position = Vector2(-10420.188, 516.27783)
+
+[node name="Tiny3" parent="Enemy" unique_id=223136960 instance=ExtResource("24_bgggw")]
+position = Vector2(-2692.1885, 452.27783)
+
+[node name="Glowy" parent="Enemy" unique_id=1748583255 instance=ExtResource("25_2tvej")]
+position = Vector2(-9868.188, -195.72217)
+
+[node name="Glowy2" parent="Enemy" unique_id=1785411215 instance=ExtResource("25_2tvej")]
+position = Vector2(-6644.1885, 692.27783)
+
+[node name="Glowy3" parent="Enemy" unique_id=944978255 instance=ExtResource("25_2tvej")]
+position = Vector2(-7060.1885, -259.72217)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1451512988]
+position = Vector2(16, -816)
+stream = ExtResource("27_2tvej")
+volume_db = -12.0
+autoplay = true
+area_mask = 3

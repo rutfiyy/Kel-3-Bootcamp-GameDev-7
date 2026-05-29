@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://daw0a5w1ejkay"]
+
+[ext_resource type="Texture2D" uid="uid://r03mwjwvk6uk" path="res://Assets/props/props_FG_tablecoral.png" id="1_bjuyr"]
+[ext_resource type="Texture2D" uid="uid://u5x4jsy83o0v" path="res://Assets/props/props_FG_ground.png" id="2_ucviw"]
+[ext_resource type="Texture2D" uid="uid://cnbdsv0dppo1m" path="res://Assets/props/props_FG_leaves.png" id="3_jm58b"]
+[ext_resource type="Script" uid="uid://ep8f70s8t0gu" path="res://scripts/prop_sway.gd" id="4_wfh28"]
+
+[node name="level_1_4_foreground" type="Node2D" unique_id=1567083575]
+
+[node name="PropsFgTablecoral" type="Sprite2D" parent="." unique_id=1019210851]
+position = Vector2(555.61774, 1394.5001)
+scale = Vector2(0.60994744, 0.6099475)
+texture = ExtResource("1_bjuyr")
+
+[node name="PropsFgGround" type="Sprite2D" parent="." unique_id=2044325960]
+position = Vector2(121, 1324)
+scale = Vector2(0.6237525, 0.6237525)
+texture = ExtResource("2_ucviw")
+
+[node name="PropsFgGround2" type="Sprite2D" parent="." unique_id=1528819119]
+position = Vector2(1704, 1324)
+scale = Vector2(0.6237525, 0.6237525)
+texture = ExtResource("2_ucviw")
+
+[node name="PropsFgLeaves" type="Sprite2D" parent="." unique_id=971248379]
+position = Vector2(1892, 1520.9999)
+scale = Vector2(0.60833335, 0.60833335)
+texture = ExtResource("3_jm58b")
+offset = Vector2(0, -200)
+script = ExtResource("4_wfh28")

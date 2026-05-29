@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://by55ay4uvo7og"]
+
+[ext_resource type="Texture2D" uid="uid://r03mwjwvk6uk" path="res://Assets/props/props_FG_tablecoral.png" id="1_h3tw6"]
+[ext_resource type="Texture2D" uid="uid://drptkivlvslbx" path="res://Assets/props/props_FG_tree.png" id="2_smdm1"]
+[ext_resource type="Script" uid="uid://ep8f70s8t0gu" path="res://scripts/prop_sway.gd" id="3_wlncy"]
+[ext_resource type="Texture2D" uid="uid://cnbdsv0dppo1m" path="res://Assets/props/props_FG_leaves.png" id="4_t8wb5"]
+[ext_resource type="Texture2D" uid="uid://u5x4jsy83o0v" path="res://Assets/props/props_FG_ground.png" id="5_ebc6h"]
+
+[node name="Level_1_1_Foreground" type="Node2D" unique_id=547486746]
+
+[node name="Props" type="Node2D" parent="." unique_id=1955796849]
+
+[node name="PropsFgTablecoral" type="Sprite2D" parent="Props" unique_id=974623723]
+position = Vector2(1873.5868, 1429.7501)
+scale = Vector2(0.7972761, 0.8246077)
+texture = ExtResource("1_h3tw6")
+
+[node name="PropsFgTablecoral3" type="Sprite2D" parent="Props" unique_id=837132344]
+position = Vector2(3793.587, 1420.7501)
+scale = Vector2(0.7972761, 0.8246077)
+texture = ExtResource("1_h3tw6")
+
+[node name="PropsFgTablecoral2" type="Sprite2D" parent="Props" unique_id=1872378039]
+position = Vector2(2289.587, 1480.7501)
+scale = Vector2(0.6365551, 0.658377)
+texture = ExtResource("1_h3tw6")
+
+[node name="PropsFgTree" type="Sprite2D" parent="Props" unique_id=461111387]
+position = Vector2(3548.0002, 1371)
+scale = Vector2(0.8069307, 0.80693066)
+texture = ExtResource("2_smdm1")
+offset = Vector2(0, -600)
+script = ExtResource("3_wlncy")
+
+[node name="PropsMgLeaves" type="Sprite2D" parent="Props" unique_id=1317420609]
+position = Vector2(830, 1609)
+texture = ExtResource("4_t8wb5")
+offset = Vector2(0, -400)
+script = ExtResource("3_wlncy")
+
+[node name="PropsMgLeaves2" type="Sprite2D" parent="Props" unique_id=711910687]
+position = Vector2(958, 1746.0001)
+scale = Vector2(0.7599988, 0.7599988)
+texture = ExtResource("4_t8wb5")
+offset = Vector2(0, -400)
+script = ExtResource("3_wlncy")
+
+[node name="PropsFgGround" type="Sprite2D" parent="Props" unique_id=1768049884]
+position = Vector2(582.58685, 1347.75)
+scale = Vector2(0.6776447, 0.6776447)
+texture = ExtResource("5_ebc6h")

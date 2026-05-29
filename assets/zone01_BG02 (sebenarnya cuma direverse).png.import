@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://exmscww27bxb"
-path="res://.godot/imported/zone01_BG02 (sebenarnya cuma direverse).png-3e1bdf3b0777c3e73339e88db26506fd.ctex"
+path="res://.godot/imported/zone01_BG02 (sebenarnya cuma direverse).png-262d267a0475d002a2d0cdf40bbbca6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/zone01_BG02 (sebenarnya cuma direverse).png"
-dest_files=["res://.godot/imported/zone01_BG02 (sebenarnya cuma direverse).png-3e1bdf3b0777c3e73339e88db26506fd.ctex"]
+source_file="res://Assets/zone01_BG02 (sebenarnya cuma direverse).png"
+dest_files=["res://.godot/imported/zone01_BG02 (sebenarnya cuma direverse).png-262d267a0475d002a2d0cdf40bbbca6f.ctex"]
 
 [params]
 

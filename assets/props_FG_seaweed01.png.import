@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g0o8axxsnvmc"
-path="res://.godot/imported/props_FG_seaweed01.png-84ea6a0eb987b701f8041aa7544484bb.ctex"
+path="res://.godot/imported/props_FG_seaweed01.png-4d40d381f15c5b9d03d520dc4af65c9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/props_FG_seaweed01.png"
-dest_files=["res://.godot/imported/props_FG_seaweed01.png-84ea6a0eb987b701f8041aa7544484bb.ctex"]
+source_file="res://Assets/props_FG_seaweed01.png"
+dest_files=["res://.godot/imported/props_FG_seaweed01.png-4d40d381f15c5b9d03d520dc4af65c9b.ctex"]
 
 [params]
 

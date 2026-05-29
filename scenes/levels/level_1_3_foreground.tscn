@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://50655o7iabl2"]
+
+[ext_resource type="Texture2D" uid="uid://cnbdsv0dppo1m" path="res://Assets/props/props_FG_leaves.png" id="1_f6jww"]
+[ext_resource type="Script" uid="uid://ep8f70s8t0gu" path="res://scripts/prop_sway.gd" id="2_4aqj7"]
+
+[node name="level_1_3_foreground" type="Node2D" unique_id=1625812234]
+
+[node name="PropsFgLeaves" type="Sprite2D" parent="." unique_id=705603875]
+position = Vector2(-164, 1501)
+scale = Vector2(0.73125, 0.73125005)
+texture = ExtResource("1_f6jww")
+offset = Vector2(0, -360)
+script = ExtResource("2_4aqj7")
+
+[node name="PropsFgLeaves2" type="Sprite2D" parent="." unique_id=184242159]
+position = Vector2(-77.00001, 1507.0001)
+scale = Vector2(0.46822917, 0.4682292)
+texture = ExtResource("1_f6jww")
+offset = Vector2(0, -360)
+script = ExtResource("2_4aqj7")
+
+[node name="PropsFgLeaves3" type="Sprite2D" parent="." unique_id=1610881162]
+position = Vector2(210.00002, 1459.0001)
+scale = Vector2(0.33828127, 0.3382813)
+texture = ExtResource("1_f6jww")
+offset = Vector2(0, -360)
+script = ExtResource("2_4aqj7")
+
+[node name="PropsFgLeaves4" type="Sprite2D" parent="." unique_id=1643084264]
+position = Vector2(3864, 1645)
+scale = Vector2(0.7399751, 0.7399753)
+texture = ExtResource("1_f6jww")
+offset = Vector2(0, -360)
+script = ExtResource("2_4aqj7")
+
+[node name="PropsFgLeaves6" type="Sprite2D" parent="." unique_id=1778856232]
+position = Vector2(4079, 1417.0001)
+scale = Vector2(0.7399751, 0.7399753)
+texture = ExtResource("1_f6jww")
+offset = Vector2(0, -360)
+script = ExtResource("2_4aqj7")
+
+[node name="PropsFgLeaves7" type="Sprite2D" parent="." unique_id=1377134338]
+position = Vector2(4161, 1405.0001)
+scale = Vector2(0.47666085, 0.47666097)
+texture = ExtResource("1_f6jww")
+offset = Vector2(0, -360)
+script = ExtResource("2_4aqj7")
+
+[node name="PropsFgLeaves5" type="Sprite2D" parent="." unique_id=174493077]
+position = Vector2(3588.0002, 1458)
+scale = Vector2(0.33665565, 0.3366557)
+texture = ExtResource("1_f6jww")
+offset = Vector2(0, -360)
+flip_h = true
+script = ExtResource("2_4aqj7")

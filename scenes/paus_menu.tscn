@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://be34ktese3exf"]
+
+[ext_resource type="Script" uid="uid://6p1ycuqsuqe7" path="res://scenes/paus_menu.gd" id="1_q5yc7"]
+[ext_resource type="Texture2D" uid="uid://cyqjs60bos5wv" path="res://Assets/UI/Main Menu/Main Menu Background.jpg" id="1_s8roa"]
+[ext_resource type="Texture2D" uid="uid://doacpvhqgpkd" path="res://Pause Menu Background.png" id="2_q5yc7"]
+[ext_resource type="Texture2D" uid="uid://1n5rks0qwc0k" path="res://Button/Angie UI Button v1.png" id="3_5pejx"]
+[ext_resource type="Texture2D" uid="uid://5da8i6vlm5tu" path="res://Button/Angie UI Button v2.png" id="4_feoox"]
+[ext_resource type="Texture2D" uid="uid://dw8307i4tr5ji" path="res://Button/Angie UI Button v3.png" id="5_8rfa6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ovkco"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kkmhc"]
+
+[node name="Control" type="Control" unique_id=640826318]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q5yc7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=86350056]
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_s8roa")
+
+[node name="PauseMenuBackground" type="Sprite2D" parent="TextureRect" unique_id=1604375600]
+z_index = 10
+position = Vector2(648, 368)
+scale = Vector2(0.8828125, 0.8828125)
+texture = ExtResource("2_q5yc7")
+
+[node name="Control" type="Control" parent="TextureRect" unique_id=1990175811]
+z_index = 10
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="TextureRect/Control" unique_id=2133353802]
+z_index = 10
+layout_mode = 0
+offset_left = 568.0
+offset_top = 160.0
+offset_right = 709.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 45
+text = "Paused"
+
+[node name="AngieUiButtonV1" type="Sprite2D" parent="TextureRect/Control" unique_id=1292065233]
+z_index = 10
+position = Vector2(647.99994, 407.99997)
+scale = Vector2(0.6015623, 0.6015623)
+texture = ExtResource("3_5pejx")
+
+[node name="AngieUiButtonV2" type="Sprite2D" parent="TextureRect/Control" unique_id=1724770324]
+z_index = 10
+position = Vector2(648, 520)
+scale = Vector2(0.60156244, 0.60156244)
+texture = ExtResource("4_feoox")
+
+[node name="AngieUiButtonV3" type="Sprite2D" parent="TextureRect/Control" unique_id=1264681344]
+z_index = 10
+position = Vector2(648, 288)
+scale = Vector2(0.5937499, 0.5937499)
+texture = ExtResource("5_8rfa6")
+
+[node name="ResumeBtn" type="Button" parent="TextureRect/Control" unique_id=2117923826]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 544.0
+offset_top = 256.0
+offset_right = 760.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ovkco")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kkmhc")
+text = "Resume"
+
+[node name="OptionsBtn" type="Button" parent="TextureRect/Control" unique_id=2042646067]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 544.0
+offset_top = 368.0
+offset_right = 760.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ovkco")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kkmhc")
+text = "Options"
+
+[node name="QuitBtn" type="Button" parent="TextureRect/Control" unique_id=78325750]
+unique_name_in_owner = true
+z_index = 11
+layout_mode = 0
+offset_left = 544.0
+offset_top = 488.0
+offset_right = 760.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ovkco")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kkmhc")
+text = "Quit Game"
+
+[node name="QuitConfirm" type="ConfirmationDialog" parent="." unique_id=845731440]
+unique_name_in_owner = true
+oversampling_override = 1.0
+title = "Quit to Main Menu"
+position = Vector2i(468, 330)
+size = Vector2i(365, 100)
+ok_button_text = "Ok"
+dialog_text = "Are you sure you want to quit to main menu?"

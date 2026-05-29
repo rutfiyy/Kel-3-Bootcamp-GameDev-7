@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://soycnmiy485f"
-path="res://.godot/imported/props_FG_anemone01.png-03ea8fffe66e72656c66ddbe701bcc5c.ctex"
+path="res://.godot/imported/props_FG_anemone01.png-f2ef4d1bf866a6a554f8730b787fb3f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/props_FG_anemone01.png"
-dest_files=["res://.godot/imported/props_FG_anemone01.png-03ea8fffe66e72656c66ddbe701bcc5c.ctex"]
+source_file="res://Assets/props_FG_anemone01.png"
+dest_files=["res://.godot/imported/props_FG_anemone01.png-f2ef4d1bf866a6a554f8730b787fb3f0.ctex"]
 
 [params]
 
