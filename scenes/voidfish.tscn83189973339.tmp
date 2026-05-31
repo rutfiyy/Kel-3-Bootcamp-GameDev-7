@@ -1,18 +1,21 @@
-[gd_scene format=3 uid="uid://cdjjxor8ygrxh"]
+[gd_scene format=3 uid="uid://cswhuxbl8yjff"]
 
-[ext_resource type="Script" uid="uid://cun2sw573rum4" path="res://scenes/glowy.gd" id="1_6vh7j"]
+[ext_resource type="Script" uid="uid://d0rycwc0vyetq" path="res://scenes/voidfish.gd" id="1_cmw5q"]
 
 [sub_resource type="DragonBonesFactory" id="DragonBonesFactory_iq6f0"]
 dragon_bones_ske_file_list = PackedStringArray("res://Characters/finley/Export JSON/finleyAnim_ske.json")
 texture_atlas_json_file_list = PackedStringArray("res://Characters/finley/Export JSON/finleyAnim_tex.json")
 
-[node name="Finley" type="CharacterBody2D" unique_id=141814402 groups=["enemy"]]
+[node name="Voidfish" type="CharacterBody2D" unique_id=141814402 groups=["enemy"]]
+z_index = 1
 scale = Vector2(1.2, 1.2)
 collision_layer = 0
-script = ExtResource("1_6vh7j")
+script = ExtResource("1_cmw5q")
+speed_multiplier_medium = 1.5
+move_speed = 120.0
 ember_value = 32
 base_scale = 0.7
-minimum_amber = 60
+minimum_amber = 75
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=428782656]
 position = Vector2(-6.6666565, 0)
@@ -24,6 +27,7 @@ armature_settings = {
 &"current_animation": "[none]",
 "sub_armatures": {}
 }
+modulate = Color(0, 0, 0, 1)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1866304743]
 unique_name_in_owner = true

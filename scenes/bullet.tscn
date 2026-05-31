@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bp2iwvcitok0p" path="res://scenes/bullet.gd" id="1_y25gk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y25gk"]
-radius = 5.0
+radius = 15.0
 
 [node name="Bullet" type="Area2D" unique_id=1640791416]
 light_mask = 9
@@ -15,5 +15,6 @@ script = ExtResource("1_y25gk")
 shape = SubResource("CircleShape2D_y25gk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=651191650]
-scale = Vector2(0.1, 0.1)
+modulate = Color(1.353256, 1.353256, 1.353256, 1)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_mkf8s")

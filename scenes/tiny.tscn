@@ -8,8 +8,10 @@ texture_atlas_json_file_list = PackedStringArray("res://Characters/tiny/Export J
 
 [node name="Tiny" type="CharacterBody2D" unique_id=141814402 groups=["enemy"]]
 scale = Vector2(0.8, 0.8)
+collision_layer = 0
 script = ExtResource("1_qw0u8")
-move_speed = 60.0
+ember_value = 12
+minimum_amber = 20
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=48801244]
 position = Vector2(-1.5258789e-05, 0)
@@ -28,6 +30,7 @@ scale = Vector2(0.99999994, 0.99999994)
 unique_name_in_owner = true
 visibility_layer = 4
 scale = Vector2(0.39999998, 0.39999998)
+collision_mask = 3
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Hitbox" unique_id=1238416048]
 light_mask = 10

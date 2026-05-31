@@ -7,7 +7,11 @@ dragon_bones_ske_file_list = PackedStringArray("res://Characters/glowy/Export JS
 texture_atlas_json_file_list = PackedStringArray("res://Characters/glowy/Export JSON/glowyAnim_tex.json")
 
 [node name="Glowy" type="CharacterBody2D" unique_id=141814402 groups=["enemy"]]
+collision_layer = 0
 script = ExtResource("1_iuafj")
+ember_value = 24
+base_scale = 1.0
+minimum_amber = 40
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=197674233]
 polygon = PackedVector2Array(8.5, -69.5, 8.5, -68.2, -3.899994, -65.5, -6, -65.5, -35.5, -49.7, -61.699997, -45.4, -64, -46.5, -65.7, -46.5, -99.6, -38.5, -102.1, -38.5, -116.1, -29.5, -119.3, -29.5, -128.3, -20.5, -130.1, -20.5, -134.1, -2.5, -136.3, -2.5, -130.5, 13.900002, -130.5, 16.5, -120.5, 24.400002, -120.5, 25.699997, -108.5, 31.699997, -108.5, 33.1, -82.5, 39, -82.5, 40.4, -64.6, 41.5, -62.4, 41.5, -50.5, 54.300003, -50.5, 55.699997, -29.5, 67.600006, -29.5, 69.5, -18.400002, 69.5, -19.5, 45.4, -17.599998, 42.1, -12.5, 41.1, -12.5, 40.300003, 1.6000061, 39.5, 5.100006, 39.5, 23.5, 47.699997, 23.5, 49.5, 59.5, 49.5, 65.5, 41.1, 65.5, 32.699997, 56.600006, 23.800003, 58.5, 21.099998, 64.5, 19.199997, 65, 19.5, 67.600006, 19.5, 74.5, 27.199997, 74.5, 28.599998, 84.5, 34.6, 84.5, 35.9, 111.2, 45.5, 124.600006, 45.5, 131.6, 34.5, 134.20001, 34.5, 125, 2.5999985, 131, -18.5, 132.5, -18.5, 132.5, -31.3, 126.5, -37.3, 126.5, -39.9, 104.100006, -35.5, 101, -35.5, 67, -17.5, 66.2, -17.5, 55.5, -25.5, 55.5, -26.900002, 22.899994, -39.5, 21.600006, -39.5, 19.5, -43, 19.5, -44.2, 24.5, -55.1, 24.5, -65.6, 21.5, -67.6, 21.5, -69.5)
@@ -18,11 +22,13 @@ armature_settings = {
 &"current_animation": "[none]",
 "sub_armatures": {}
 }
+scale = Vector2(3, 3)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1866304743]
 unique_name_in_owner = true
 visibility_layer = 4
 scale = Vector2(0.39999998, 0.39999998)
+collision_mask = 3
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Hitbox" unique_id=870467821]
 light_mask = 10

@@ -15,7 +15,11 @@ var max_player_size : float = 3.0
 var settings_popup : PopupPanel = null
 var pause_menu : Control = null
 
+var player : Player
+
 func _ready():
+	player = get_tree().get_first_node_in_group("player")
+	player.win.connect(win)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 	if game_over_panel:
@@ -25,7 +29,6 @@ func _ready():
 		level_complete_panel.visible = false
 		level_complete_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-	var player = get_tree().get_first_node_in_group("player")
 	if player:
 		player.size_changed.connect(_on_player_size_changed)
 		_on_player_size_changed(player.current_size)
@@ -74,7 +77,7 @@ func _on_player_size_changed(new_size: float):
 	if size_label:
 		size_label.text = "Ukuran: %.2f" % new_size
 	if ember_bar:
-		ember_bar.value = clamp(new_size / max_player_size * 100.0, 0.0, 100.0)
+		ember_bar.value = clamp(new_size / player.ember_value_max * 100, 0.0, 100.0)
 
 func _on_player_died():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -134,14 +137,23 @@ func _on_settings_closed():
 		get_tree().paused = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
+func win() :
+	if level_complete_panel:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		level_complete_panel.visible = true
+		var player = get_tree().get_first_node_in_group("player")
+		if player and player.has_method("freeze"):
+			player.freeze()
+
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept"):
-		if level_complete_panel:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			level_complete_panel.visible = true
-			var player = get_tree().get_first_node_in_group("player")
-			if player and player.has_method("freeze"):
-				player.freeze()
-			var spawner = get_node_or_null("Spawner")
-			if spawner and spawner.has_method("stop"):
-				spawner.stop()
+	pass
+	#if event.is_action_pressed("ui_accept"):
+		#if level_complete_panel:
+			#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			#level_complete_panel.visible = true
+			#var player = get_tree().get_first_node_in_group("player")
+			#if player and player.has_method("freeze"):
+				#player.freeze()
+			#var spawner = get_node_or_null("Spawner")
+			#if spawner and spawner.has_method("stop"):
+				#spawner.stop()

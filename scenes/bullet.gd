@@ -4,6 +4,7 @@ extends Area2D
 var direction : Vector2 = Vector2.RIGHT
 
 func _ready():
+	add_to_group("bullet")
 	area_entered.connect(_on_area_entered)
 	body_entered.connect(_on_body_entered)
 

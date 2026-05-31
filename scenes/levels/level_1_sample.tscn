@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cgcq8bvgum7dr" path="res://Assets/backgrounds/Black.png" id="6_xu003"]
 [ext_resource type="Texture2D" uid="uid://dnvnbi0ga5s0t" path="res://Assets/UI/Pop Up Menu/Pop up Menu Long.png" id="7_6c8pm"]
 [ext_resource type="PackedScene" uid="uid://by55ay4uvo7og" path="res://scenes/levels/level_1_1_foreground.tscn" id="7_hwhck"]
+[ext_resource type="PackedScene" uid="uid://muc0td7yo3df" path="res://scenes/spawner.tscn" id="7_psqv8"]
+[ext_resource type="PackedScene" uid="uid://c43xi5mader12" path="res://scenes/ember.tscn" id="7_rcrtk"]
 [ext_resource type="Texture2D" uid="uid://bfeyd3lrjjf0b" path="res://Assets/UI/Pop Up Menu/Angie Defeat.png" id="8_x58ih"]
 [ext_resource type="PackedScene" uid="uid://50655o7iabl2" path="res://scenes/levels/level_1_3_foreground.tscn" id="9_b606m"]
 [ext_resource type="Texture2D" uid="uid://1n5rks0qwc0k" path="res://Button/Angie UI Button v1.png" id="9_qurrc"]
@@ -27,11 +29,18 @@
 [ext_resource type="PackedScene" uid="uid://bwjd2auaoron7" path="res://scenes/tiny.tscn" id="24_bgggw"]
 [ext_resource type="PackedScene" uid="uid://clwokji2pwnwl" path="res://scenes/glowy.tscn" id="25_2tvej"]
 [ext_resource type="AudioStream" uid="uid://cvgkj6u40fubk" path="res://Assets/Music/SM64 Custom Music -  if it rains - pillow05 (youtube).mp3" id="27_2tvej"]
+[ext_resource type="PackedScene" uid="uid://cswhuxbl8yjff" path="res://scenes/voidfish.tscn" id="28_33gpr"]
+[ext_resource type="Script" uid="uid://dvg2jk8gnbw6y" path="res://scenes/levels/music_loop.gd" id="31_yq0ce"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufevr"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ssxrb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_psqv8"]
+font_size = 24
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyjs4"]
 size = Vector2(299.2401, 544.1017)
@@ -55,9 +64,133 @@ position = Vector2(7656, -1)
 [node name="Level_1_4_Background" parent="Backgrounds" unique_id=1896166870 instance=ExtResource("4_x0c2r")]
 position = Vector2(12326, 0)
 
+[node name="Spawner" type="Node2D" parent="." unique_id=214184772]
+
+[node name="Ember1" parent="Spawner" unique_id=373084076 instance=ExtResource("7_psqv8")]
+position = Vector2(2116, 258)
+target_scene = ExtResource("7_rcrtk")
+spawn_area = Vector2(2500, 1500)
+spawn_interval = 2.0
+spawn_group = "ember1"
+
+[node name="Ember2" parent="Spawner" unique_id=78487000 instance=ExtResource("7_psqv8")]
+position = Vector2(5318, 207)
+target_scene = ExtResource("7_rcrtk")
+spawn_area = Vector2(2500, 1500)
+spawn_interval = 2.0
+spawn_group = "ember2"
+
+[node name="Ember3" parent="Spawner" unique_id=2144180331 instance=ExtResource("7_psqv8")]
+position = Vector2(8440, 258)
+target_scene = ExtResource("7_rcrtk")
+spawn_area = Vector2(2500, 1500)
+spawn_interval = 2.0
+spawn_group = "ember3"
+
+[node name="Ember4" parent="Spawner" unique_id=62007914 instance=ExtResource("7_psqv8")]
+position = Vector2(11448, 283)
+target_scene = ExtResource("7_rcrtk")
+spawn_area = Vector2(2500, 1500)
+spawn_interval = 2.0
+spawn_group = "ember4"
+
+[node name="Small1" parent="Spawner" unique_id=563935940 instance=ExtResource("7_psqv8")]
+position = Vector2(2116, 258)
+target_scene = ExtResource("24_bgggw")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 3
+spawn_interval = 2.0
+spawn_group = "small1"
+
+[node name="Small2" parent="Spawner" unique_id=81034659 instance=ExtResource("7_psqv8")]
+position = Vector2(5318, 207)
+target_scene = ExtResource("24_bgggw")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 3
+spawn_interval = 2.0
+spawn_group = "small2"
+
+[node name="Small3" parent="Spawner" unique_id=1116400518 instance=ExtResource("7_psqv8")]
+position = Vector2(8440, 258)
+target_scene = ExtResource("24_bgggw")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 3
+spawn_interval = 2.0
+spawn_group = "small3"
+
+[node name="Small4" parent="Spawner" unique_id=1690806620 instance=ExtResource("7_psqv8")]
+position = Vector2(11448, 283)
+target_scene = ExtResource("24_bgggw")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 3
+spawn_interval = 2.0
+spawn_group = "small4"
+
+[node name="Medium1" parent="Spawner" unique_id=1267831459 instance=ExtResource("7_psqv8")]
+position = Vector2(2116, 258)
+target_scene = ExtResource("25_2tvej")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 2
+spawn_interval = 3.0
+spawn_group = "medium1"
+
+[node name="Medium2" parent="Spawner" unique_id=354542860 instance=ExtResource("7_psqv8")]
+position = Vector2(5318, 207)
+target_scene = ExtResource("25_2tvej")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 2
+spawn_interval = 3.0
+spawn_group = "medium2"
+
+[node name="Medium3" parent="Spawner" unique_id=1863139310 instance=ExtResource("7_psqv8")]
+position = Vector2(8440, 258)
+target_scene = ExtResource("25_2tvej")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 2
+spawn_interval = 3.0
+spawn_group = "medium3"
+
+[node name="Medium4" parent="Spawner" unique_id=353877774 instance=ExtResource("7_psqv8")]
+position = Vector2(11448, 283)
+target_scene = ExtResource("25_2tvej")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 2
+spawn_interval = 3.0
+spawn_group = "medium4"
+
+[node name="Large1" parent="Spawner" unique_id=956768454 instance=ExtResource("7_psqv8")]
+position = Vector2(2116, 258)
+target_scene = ExtResource("23_0emuy")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 1
+spawn_group = "large1"
+
+[node name="Large2" parent="Spawner" unique_id=1719200328 instance=ExtResource("7_psqv8")]
+position = Vector2(5318, 207)
+target_scene = ExtResource("23_0emuy")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 1
+spawn_group = "large2"
+
+[node name="Large3" parent="Spawner" unique_id=1844978126 instance=ExtResource("7_psqv8")]
+position = Vector2(8440, 258)
+target_scene = ExtResource("23_0emuy")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 1
+spawn_group = "large3"
+
+[node name="Large4" parent="Spawner" unique_id=348310821 instance=ExtResource("7_psqv8")]
+position = Vector2(11448, 283)
+target_scene = ExtResource("23_0emuy")
+spawn_area = Vector2(2500, 1500)
+max_spawn = 1
+spawn_interval = 2.0
+spawn_group = "large4"
+
 [node name="Player" parent="." unique_id=1153191769 instance=ExtResource("3_mtc3j")]
 top_level = true
 position = Vector2(344, 424)
+ember_scale_max = 1.8
 idle_time_to_shrink = 100.0
 max_idle_before_death = 100.0
 
@@ -297,6 +430,24 @@ scale = Vector2(0.21874994, 0.21874994)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ssxrb")
 icon = ExtResource("16_yq0ce")
 
+[node name="AngieLevel" type="Label" parent="UI/Control" unique_id=969674151]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 116.0
+offset_right = 54.0
+offset_bottom = 139.0
+text = "Angie Level"
+label_settings = SubResource("LabelSettings_psqv8")
+
+[node name="EmberValue" type="Label" parent="UI/Control" unique_id=1822604627]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 21.0
+offset_right = 322.0
+offset_bottom = 55.0
+text = "100"
+label_settings = SubResource("LabelSettings_psqv8")
+
 [node name="Border Left Right" type="Node2D" parent="." unique_id=758134732]
 
 [node name="Fade Left" type="Sprite2D" parent="Border Left Right" unique_id=744756741]
@@ -379,9 +530,11 @@ position = Vector2(-6644.1885, 692.27783)
 [node name="Glowy3" parent="Enemy" unique_id=944978255 instance=ExtResource("25_2tvej")]
 position = Vector2(-7060.1885, -259.72217)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1451512988]
-position = Vector2(16, -816)
+[node name="Voidfish" parent="Enemy" unique_id=26311554 instance=ExtResource("28_33gpr")]
+position = Vector2(-13454.189, 195.27783)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1757441911]
 stream = ExtResource("27_2tvej")
-volume_db = -12.0
+volume_db = -17.568
 autoplay = true
-area_mask = 3
+script = ExtResource("31_yq0ce")

@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var ember_value : int = 1
+@export var ember_value : int = 5
 
 func _ready():
 	add_to_group("ember")
